@@ -30,7 +30,7 @@
     <div class="custom-container">
         <div class="navigationbar-flex navbar-default">
             <div class="flexleft">
-                <a class="navigationbar-item" href="">
+                <a class="navigationbar-item" href="/filterpage">
                     <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
                 </a>
             </div>
@@ -38,41 +38,26 @@
                 <input type="text" class="search-box" placeholder="Search">
             </form>
             <div class="flexright">
-                <a class="navigationbar-item btn btn-default" href="javascript:login('show')">
-                    <span>Login</span>
-                    <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+                <a class="navigationbar-item" href="/addeventpage">
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                 </a>
-                <div id="popupbox">
-                    <form name="login" action="" method="post">
-                        <center>Username:</center>
-                        <center>
-                            <input name="username" size="14">
-                        </center>
-                        <center>Password:</center>
-                        <center>
-                            <input name="password" type="password" size="14">
-                        </center>
-                        <center><a href="/indexin">Submit</a></center>
-                        <center><a href="javascript:login('hide')">Close</a></center>
-                    </form>
-                </div>
+                <a class="navigationbar-item" href="/profilepage">
+                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                </a>
+                <a class="navigationbar-item" href="/">
+                    <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+                </a>
+                <!--
                 <a class="navigationbar-item" href="">
                     <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
                 </a>
+-->
             </div>
         </div>
 
-        <!--    <ul class="nav nav-tabs nav-justified">-->
-        <!--
-    <ul class="">
-        <li role="presentation" class="active"><a href="/">Events</a></li>
-        <li role="presentation"><a href="/hostlist">Hosts</a></li>
-    </ul>
--->
-
-    </div>
 </header>
-<body>
+
+<body class="container">
     <div class="g-grid">
         <section class="1-pad-bot-5 1-sm-pad-bot-3">
             <div class="js-popular-events">
@@ -82,14 +67,17 @@
                             <div class="poster-card__image" style="display: inline-block">
                                 <img style="height:150px;width:150px" class="img-responsive" src="img/diadelosmuertos.jpg">
                             </div>
-                            
+
                             <div style="display: inline-block">
+<!--
                                 <div>
                                     <h2 style="display: inline-block"></h2>
-                                    <div class = "flexright" style="display: inline-block"><a class="btn btn-default" href="/">
-							             <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></a>
+                                    <div class="flexright" style="display: inline-block">
+                                        <a class="btn btn-default" href="/">
+                                            <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></a>
                                     </div>
                                 </div>
+-->
                                 <div style="display: inline-block">
                                     <p style="display: inline-block">11/3/16</p>
                                     <p style="display: inline-block">12:00AM</p>
@@ -97,32 +85,34 @@
                                 </div>
                                 <div class="dropdown">
                                     <script>
-    	                               function change() // no ';' here
-		                                  {
-   			                              var elem = document.getElementById("myButton1");
-    		                              if (elem.value=="Not Following") elem.value = "Following";
-    		                              else elem.value = "Not Following";
-		                                  }
+                                        function change() // no ';' here
+                                        {
+                                            var elem = document.getElementById("myButton1");
+                                            if (elem.value == "Not Following") elem.value = "Following";
+                                            else elem.value = "Not Following";
+                                        }
                                     </script>
-        				            <div class="dropdown">
-        				                <input onclick="change()" type="button" value="Not Following" id="myButton1">
-				                    </div>
+                                    <div class="dropdown">
+                                        <input onclick="change()" type="button" value="Not Following" id="myButton1">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="flexbox flex-tabs">
-                            <a href="#">
-                                <div class="active">Upcoming Events</div>
+                            <a href="">
+                                <div class="active">Details</div>
                             </a>
-                            <a href="#">
-                                <div>Past Events</div>
+                            <a href="/discusspage">
+                                <div>Discussion</div>
                             </a>
                         </div>
                     </div>
-             </div>
+                </div>
             </div>
         </section>
     </div>
+
+    <p>Want to get some FREE cookies and Pan de Muertos? Want to learn more about Mexican culture and Dia de los Muertos? Want to do some coloring to relieve your stress from midterms? Come join CAN's Dia de los Muertos Event for some (limited) yummy treats!</p>
     
 </body>
 
