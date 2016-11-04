@@ -1,149 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta charset="utf-8">
 
-		<title>Literate-Spoon</title>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>Effective-Eureka</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <!--    <link href="css/spacelab.css" rel="stylesheet">-->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- These lines are needed for Javascript and also enables Heroku to publish our app -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="js/handlebars-v4.0.5.js"></script>
+    <!--<script src="js/index.js"></script>-->
 
-		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<script src="script.js"></script>
-		<link rel="stylesheet" href="css/style.css">
-	</head>
+    <script language="JavaScript" type="text/javascript">
+        function login(showhide) {
+            if (showhide == "show") {
+                document.getElementById('popupbox').style.visibility = "visible";
+            } else if (showhide == "hide") {
+                document.getElementById('popupbox').style.visibility = "hidden";
+            }
+        }
+    </script>
 
-	<body>
-		<nav class="navbar navbar-default navbar-fixed-top">
-      		<div class="container-fluid">
-				<ul class="nav navbar-nav">
-					<li class="dropdown">
-              <!-- <button class="btn btn-default dropdown-toggle" type="button"	data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-   						  <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
-  						</button> -->
-            			<a class="btn btn-default" href="/filterpage">
-              				<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
-            			</a>
-					</li>
+</head>
+<header>
+    <div class="custom-container">
+        <div class="navigationbar-flex navbar-default">
+            <div class="flexleft">
+                <a class="navigationbar-item" href="">
+                    <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+                </a>
+            </div>
+            <form class="search-form flexleft">
+                <input type="text" class="search-box" placeholder="Search">
+            </form>
+            <div class="flexright">
+                <a class="navigationbar-item btn btn-default" href="javascript:login('show')">
+                    <span>Login</span>
+                    <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+                </a>
+                <div id="popupbox">
+                    <form name="login" action="" method="post">
+                        <center>Username:</center>
+                        <center>
+                            <input name="username" size="14">
+                        </center>
+                        <center>Password:</center>
+                        <center>
+                            <input name="password" type="password" size="14">
+                        </center>
+                        <center><a href="/indexin">Submit</a></center>
+                        <center><a href="javascript:login('hide')">Close</a></center>
+                    </form>
+                </div>
+                <a class="navigationbar-item" href="">
+                    <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                </a>
+            </div>
+        </div>
 
-          			<li>
-            			<form class="navbar-form navbar-left" role="search">
-              				<div class="form-group">
-                                <input type="text" class="form-control" placeholder="🔎 Search">
-              				</div>
-            			</form>
-          			</li>
+        <!--    <ul class="nav nav-tabs nav-justified">-->
+        <!--
+    <ul class="">
+        <li role="presentation" class="active"><a href="/">Events</a></li>
+        <li role="presentation"><a href="/hostlist">Hosts</a></li>
+    </ul>
+-->
 
-					<li>
-            			<a class="btn btn-default" href="/addeventpage">
-              				<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-            			</a>
-					</li>
-
-					<li>
-            			<a class="btn btn-default" href="/profilepage">
-              				<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-            			</a>
-					</li>
-
-					<li>
-						<a class="btn btn-default" href="/hostlist">
-							<span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></a>
-					</li>
-				</ul>
-			</div>
-		</nav>
-
-		<div class="row-bottom-margin" role="row">
-			<table>
-       			<tr>
-          			<td rowspan="2"><img src="images/{{image}}" class="image"></td>
-         			<td>Host Name</td>
-        		</tr>
-      		</table>
-		</div>
-
-    <div class="container">
-      <div class="tababble">
-       <ul class="nav nav-tabs">
-          <li ><!--class="active"-->
-            <a href="/hostpage" data-toggle="tab">Upcoming Events</a></li>
-          <li>
-            <a href="/hostpage-pastevents" data-toggle="tab">Past Events</a></li>
-       </ul>
-     </div>
     </div>
+</header>
+<body>
+    <div class="g-grid">
+        <section class="1-pad-bot-5 1-sm-pad-bot-3">
+            <div class="js-popular-events">
+                <div class="js-events-list">
+                    <div class="g-cell g-cell--has-overflow g-cell-1-1 g-cell-md-1-2-g-cell-lg-1-3 1-pad-vert-3" role="row">
+                        <div class="well well-lg" style="margin-bottom:0px" role="gridcell">
+                            <div class="poster-card__image" style="display: inline-block">
+                                <img style="height:150px;width:150px" class="img-responsive" src="img/ieee.jpg">
+                            </div>
+                            
+                            <div style="display: inline-block">
+                                <div>
+                                    <h2 style="display: inline-block">Placeholder</h2>
+                                    <div class = "flexright" style="display: inline-block"><a class="btn btn-default" href="/">
+							             <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></a>
+                                    </div>
+                                </div>
+                                <div class="dropdown">
+                                    <script>
+    	                               function change() // no ';' here
+		                                  {
+   			                              var elem = document.getElementById("myButton1");
+    		                              if (elem.value=="Not Following") elem.value = "Following";
+    		                              else elem.value = "Not Following";
+		                                  }
+                                    </script>
+        				            <input onclick="change()" type="button" value="Not Following" id="myButton1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flexbox flex-tabs">
+                            <a href="#">
+                                <div class="active">Upcoming Events</div>
+                                
+                            </a>
+                            <a href="#">
+                                <div>Past Events</div>
+                            </a>
+                        </div>
+                    </div>
+             </div>
+            </div>
+        </section>
+    </div>
+    
+</body>
 
-    <div class="row-bottom-margin" role="row">
-        <table>
-			<tr>
-   				<td rowspan="2"><img src="images/{{image}}" class="image"></td>
- 				<td><a href="/eventpage">Event</a></td>
-  			</tr>
-   			<tr>
-   				<td><p>Date | Time | Location</p></td>
-   			</tr>
-		</table>
-    </div>
-    <div class="row-bottom-margin" role="row">
-        <table>
-			<tr>
-   				<td rowspan="2"><img src="images/{{image}}" class="image"></td>
- 				<td><a href="/eventpage">Event</a></td>
-  			</tr>
-   			<tr>
-   				<td><p>Date | Time | Location</p></td>
-   			</tr>
-		</table>
-    </div>
-    <div class="row-bottom-margin" role="row">
-        <table>
-			<tr>
-   				<td rowspan="2"><img src="images/{{image}}" class="image"></td>
- 				<td><a href="/eventpage">Event</a></td>
-  			</tr>
-   			<tr>
-   				<td><p>Date | Time | Location</p></td>
-   			</tr>
-		</table>
-    </div>
-    <div class="row-bottom-margin" role="row">
-        <table>
-			<tr>
-   				<td rowspan="2"><img src="images/{{image}}" class="image"></td>
- 				<td><a href="/eventpage">Event</a></td>
-  			</tr>
-   			<tr>
-   				<td><p>Date | Time | Location</p></td>
-   			</tr>
-		</table>
-    </div>
-    <div class="row-bottom-margin" role="row">
-        <table>
-			<tr>
-   				<td rowspan="2"><img src="images/{{image}}" class="image"></td>
- 				<td><a href="/eventpage">Event</a></td>
-  			</tr>
-   			<tr>
-   				<td><p>Date | Time | Location</p></td>
-   			</tr>
-		</table>
-    </div>
-    <div class="row-bottom-margin" role="row">
-        <table>
-			<tr>
-   				<td rowspan="2"><img src="images/{{image}}" class="image"></td>
- 				<td><a href="/eventpage">Event</a></td>
-  			</tr>
-   			<tr>
-   				<td><p>Date | Time | Location</p></td>
-   			</tr>
-		</table>
-    </div>
-
-		<!-- These lines are needed for Javascript and also enables Heroku to publish our app -->
-		<script src="https://code.jquery.com/jquery.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-	</body>
 </html>
