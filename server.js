@@ -27,27 +27,27 @@ app.get('/', function(request, response) {
     response.render('index', dataVar);
 });
 app.get('/indexin', function(request, response){
-	response.render('indexin');});
+	response.render('indexin', dataVar);});
 app.get('/hostlist', function (request, response){
-	response.render('hostlist');});
+	response.render('hostlist', dataVar);});
 app.get('/hostpage', function (request, response) {
-    response.render('hostpage');});
+    response.render('hostpage', dataVar);});
 app.get('/hostpage-pastevents', function (request, response) {
-    response.render('hostpage-pastevents');});
+    response.render('hostpage-pastevents', dataVar);});
 app.get('/profilepage', function (request, response) {
-    response.render('profilepage');});
+    response.render('profilepage', dataVar);});
 app.get('/profilepage-notification', function (request, response) {
-    response.render('profilepage-notification');});
+    response.render('profilepage-notification', dataVar);});
 app.get('/filterpage', function (request, response) {
-    response.render('filterpage');});
+    response.render('filterpage', dataVar);});
 app.get('/addeventpage', function (request, response) {
-    response.render('addeventpage');});
+    response.render('addeventpage', dataVar);});
 app.get('/eventpage', function (request, response) {
-    response.render('eventpage');});
+    response.render('eventpage', dataVar);});
 app.get('/aboutpage', function (request, response) {
-    response.render('aboutpage');});
+    response.render('aboutpage', dataVar);});
 app.get('/discusspage', function (request, response) {
-    response.render('discusspage');});
+    response.render('discusspage', dataVar);});
 
 app.listen(app.get('port'), function () {
     console.log('Node app is running on port', app.get('port'));
