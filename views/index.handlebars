@@ -88,25 +88,18 @@
                     {{#each events}}
                         <div class="g-cell g-cell--has-overflow g-cell-1-1 g-cell-md-1-2-g-cell-lg-1-3 1-pad-vert-3" role="row">
                           <div class="well well-sm" style="margin-bottom:0px;" role="gridcell">
-                              <div class="poster-card__header" style="display: inline-block">
-                                    <div class="poster-card__image">
-                                        <img class="img-responsive" src="{{img}}" alt="">
+                              <div style="display: inline-block">
+                                    <div style="display: inline-block">
+                                    <img style="height:150px;width:150px" src="{{img}}" alt="">
+                                  </div>
+                                    <div style="display: inline-block">
+                                        <a href="/eventpage" ><div>{{eventname}}</div>                                    
+                                        <div>{{date}}</div>
+                                            <div >{{location}}</div></a>
+                                        <p style="display: inline-block">Category:</p>
+                                        <a class="event-category" style="display: inline-block" href="">{{categories}}</a>
                                     </div>
-                                </div>
-                            <a href="#" style="display: inline-block">
-                                <div class="poster-card__body">
-                                    <div class="poster-card__title">{{eventname}}
-                                    </div>
-                                    <time class="poster-card__date"> {{time}} </time>
-                                    <div class="poster-card__venue"> {{location}}</div>
-                                </div>
-                            </a>
-                            <div href="#" class="poster-card__footer">
-                                <div class="poster-card__tags">
-                                    <p style="display: inline-block">Category: </p>
-                                    <a class="event-category" style="display: inline-block" href="">{{categories}}</a>
-                                </div>
-                            </div>
+                              </div>                         
                         </div>
                     </div>
                 {{/each}}
