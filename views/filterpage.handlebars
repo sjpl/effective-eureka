@@ -1,66 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta charset="utf-8">
 
-		<title>Literate-Spoon</title>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>Effective-Eureka</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <!--    <link href="css/spacelab.css" rel="stylesheet">-->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- These lines are needed for Javascript and also enables Heroku to publish our app -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/handlebars-v4.0.5.js"></script>
+    <!--<script src="js/index.js"></script>-->
+</head>
 
-		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<script src="script.js"></script>
-		<link rel="stylesheet" href="css/style.css">
-	</head>
+<header>
+    <div class="custom-container">
+        <div class="navigationbar-flex navbar-default">
+            <div class="flexleft">
+                <a class="navigationbar-item" href="/filterpage">
+                    <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+                </a>
+            </div>
+            <form class="search-form flexleft">
+                <input type="text" class="search-box" placeholder="Search">
+            </form>
+            <div class="flexright">
+                <a class="navigationbar-item" href="/addeventpage">
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                </a>
+                <a class="navigationbar-item" href="/profilepage">
+                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                </a>
+                <a class="navigationbar-item" href="/">
+                    <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+                </a>
+                <!--
+                <a class="navigationbar-item" href="">
+                    <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                </a>
+-->
+            </div>
+        </div>
+    </div>
+</header>
 
-	<body>
-		<nav class="navbar navbar-default navbar-fixed-top">
-      		<div class="container-fluid">
-				<ul class="nav navbar-nav">
-					<li class="dropdown">
-              <!-- <button class="btn btn-default dropdown-toggle" type="button"	data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-   						  <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
-  						</button> -->
-            			<a class="btn btn-default" href="/filterpage">
-              				<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
-            			</a>
-					</li>
+<body>
+    <button type="button" class="btn btn-default btn-lg btn-block">Placeholder buttons</button>
+    <button type="button" class="btn btn-default btn-lg btn-block">for filtering</button>
+    <button type="button" class="btn btn-default btn-lg btn-block">events and hosts.</button>
 
-          			<li>
-            			<form class="navbar-form navbar-left" role="search">
-              				<div class="form-group">
-                                <input type="text" class="form-control" placeholder="🔎 Search">
-              				</div>
-            			</form>
-          			</li>
+    <!-- These lines are needed for Javascript and also enables Heroku to publish our app -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
 
-					<li>
-            			<a class="btn btn-default" href="/addeventpage">
-              				<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-            			</a>
-					</li>
-
-					<li>
-            			<a class="btn btn-default" href="/profilepage">
-              				<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-            			</a>
-					</li>
-
-					<li>
-						<a class="btn btn-default" href="/">
-							<span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></a>
-					</li>
-				</ul>
-			</div>
-		</nav>
-
-		<button type="button" class="btn btn-default btn-lg btn-block">Placeholder buttons</button>
-		<button type="button" class="btn btn-default btn-lg btn-block">for filtering</button>
-		<button type="button" class="btn btn-default btn-lg btn-block">events and hosts.</button>
-
-		<!-- These lines are needed for Javascript and also enables Heroku to publish our app -->
-		<script src="https://code.jquery.com/jquery.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-	</body>
 </html>
