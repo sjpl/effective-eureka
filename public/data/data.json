@@ -53,17 +53,6 @@
             "host": "UCSD AS Concerts & Events",
             "about": "Start Halloween weekend right with our Boo Bash! Come dressed in your spookiest costume and monster mash the night away!",
             "categories": "Recreation"
-        },
-
-        {
-            "eventname": "Tech Event - Blinking  LED Soldering Workshop",
-            "time": "10:00 AM",
-            "location": "IEEE UC San Diego Branch",
-            "date": "10/29/2016", 
-            "img": "img/ieee.jpg",
-            "host": "IEEE UC San Diego Branch",
-            "about": "Come and make a Blinking LED circuit and put it into your pumpkin or just show off to your family and friends! We will walk you through the circuit designing and building.",
-            "categories": "Career"
         }
     ],
     
@@ -97,17 +86,17 @@
     "notifications": [
         {
             "eventname": "UCSD Candlelight Vigil for Harambe",
-            "img": "public/img/harambe.jpg",
+            "img": "img/harambe.jpg",
             "notification-detail": "John Smith has changed the time from 6:00PM to 7:00PM."
         },
         {
             "eventname": "ASCE Presents: Boo Bash",
-            "img": "public/img/boobash.jpg",
+            "img": "img/boobash.jpg",
             "notification-detail": "Erica Chen changed the location to The Loft @ UCSD."
         },
         {
             "eventname": "Tech Event - Blinking  LED Soldering Workshop",
-            "img": "public/img/ieee.jpg",
+            "img": "img/ieee.jpg",
             "notification-detail": "Abby Gale posted to the discussion."
         }
     ]
