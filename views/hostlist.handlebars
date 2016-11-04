@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+
+    <title>Literate-Spoon</title>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/superhero/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <!-- <button class="btn btn-default dropdown-toggle" type="button"	data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+   						  <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+  						</button> -->
+                    <a class="btn btn-default" href="/filterpage">
+                        <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+                    </a>
+                </li>
+
+                <li>
+                    <form class="navbar-form navbar-left" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="🔎 Search">
+                        </div>
+                    </form>
+                </li>
+                <li>
+                    <a class="btn btn-default" href="/addeventpage">
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="btn btn-default" href="/profilepage">
+                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- <div class="container"> -->
+
+    <ul class="nav nav-tabs nav-justified">
+        <li role="presentation"><a href="/">Events</a></li>
+        <li role="presentation" class="active"><a href="/hostlist">Hosts</a></li>
+    </ul>
+    <!-- </div> -->
+
+    <div>
+        <main class="main" role="main">
+            <div class="submain">
+                <section class="eventfeed" role="region">
+                    <!--<h3 class="YourEventFeed"> Your Event Feed</h3>-->
+                    <div aria-readonly="true" class="ActualEventFeed" aria-label="Event Timeline: Your Event Timeline" role="grid">
+                        <div role="rowgroup">
+                            <div style="padding-bottom: 0px;">
+                                <div style="padding-top: 0px; padding-bottom: 400px;">
+                                    <div></div>
+                                    <div class="row-bottom-margin" role="row">
+                                        <table>
+                                            <tr>
+                                                <td rowspan="2"><img src="images/{{image}}" class="image"></td>
+                                                <td><a href="/hostpage">Host</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>Date | Time | Location</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="row-bottom-margin" role="row">
+                                        <table>
+                                            <tr>
+                                                <td rowspan="2"><img src="images/{{image}}" class="image"></td>
+                                                <td><a href="/hostpage">Host</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>Date | Time | Location</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="row-bottom-margin" role="row">
+                                        <table>
+                                            <tr>
+                                                <td rowspan="2"><img src="images/{{image}}" class="image"></td>
+                                                <td><a href="/hostpage">Host</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>Date | Time | Location</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="row-bottom-margin" role="row">
+                                        <table>
+                                            <tr>
+                                                <td rowspan="2"><img src="images/{{image}}" class="image"></td>
+                                                <td><a href="/hostpage">Host</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>Date | Time | Location</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="row-bottom-margin" role="row">
+                                        <table>
+                                            <tr>
+                                                <td rowspan="2"><img src="images/{{image}}" class="image"></td>
+                                                <td><a href="/hostpage">Host</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>Date | Time | Location</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="row-bottom-margin" role="row">
+                                        <table>
+                                            <tr>
+                                                <td rowspan="2"><img src="images/{{image}}" class="image"></td>
+                                                <td><a href="/hostpage">Host</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>Date | Time | Location</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- These lines are needed for Javascript and also enables Heroku to publish our app -->
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

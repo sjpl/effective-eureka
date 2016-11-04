@@ -1,0 +1,70 @@
+{
+    "Hey": "Heyhey",
+    "events": [
+        {
+            "eventname": "Dia de los Muertos Event",
+            "time": "12:30 PM",
+            "location": "Revelle Plaza",
+            "date": "10/28/2016", 
+            "img": "/public/img/diadelosmuertos.jpg",
+            "host": "UCSD Cultural Awareness Network",
+            "about": "Want to get some FREE cookies and Pan de Muertos? Want to learn more about Mexican culture and Dia de los Muertos? Want to do some coloring to relieve your stress from midterms? Come join CAN's Dia de los Muertos Event for some (limited) yummy treats!",
+            "categories": "Expression"
+        },
+
+        {
+            "eventname": "Snoopy's 3rd Annual Pumpkin Patch",
+            "time": "4:00 PM",
+            "location": "Sixth College Lodge",
+            "date": "10/28/2016", 
+            "img": "/public/img/pumpkinpatch.jpg",
+            "host": "UCSD Sixth College",
+            "about": "Celebrate the fall season with Snoopy's Pumpkin Patch!",
+            "categories": "Recreation"
+        },
+
+        {
+            "eventname": "VR Club Workshop: Intro to Unity",
+            "time": "5:00 PM",
+            "location": "Solis 109",
+            "date": "10/28/2016", 
+            "img": "/public/img/vr.jpg",
+            "host": "Virtual Reality Club",
+            "about": "Interested in developing for Virtual Reality, or even just making your own game? Our experienced VR Club mentors will be teaching an introduction to the Unity Game Engine, VR Club's tool of choice! We'll be going over the Unity interface, some helpful tricks and features, and some introductory scripting in C#. If you're working on a project or hoping to actually create VR experiences, this technical workshop is definitely for you! Hope to see you there!",
+            "categories": "Career"
+        },
+
+        {
+            "eventname": "UCSD Candlelight Vigil for Harambe",
+            "time": "7:00 PM",
+            "location": "UCSD Geisel Library",
+            "date": "10/28/16", 
+            "img": "/public/img/harambe.jpg",
+            "host": "Random UCSD Student",
+            "about": "It has been four months since the Great Harambe left our world. To commemorate our noble savior, we will be hosting a candlelight vigil outside of Geisel Library. Please feel free to invite your friends, family and other Harambaeites. Thank you. And May Harambe be with you. We are unfortunately not able to sell candles at the event, please bring your own. Hosted by the Harlan Harambe 16",
+            "categories": "Recreation"
+        },
+
+        {
+            "eventname": "ASCE Presents: Boo Bash",
+            "time": "8:00 PM",
+            "location": "The Loft @ UCSD",
+            "date": "10/28/2016", 
+            "img": "/public/img/boobash.jpg",
+            "host": "UCSD AS Concerts & Events",
+            "about": "Start Halloween weekend right with our Boo Bash! Come dressed in your spookiest costume and monster mash the night away!",
+            "categories": "Recreation"
+        },
+
+        {
+            "eventname": "Tech Event - Blinking  LED Soldering Workshop",
+            "time": "10:00 AM",
+            "location": "IEEE UC San Diego Branch",
+            "date": "10/29/2016", 
+            "img": "/public/img/ieee.jpg",
+            "host": "IEEE UC San Diego Branch",
+            "about": "Come and make a Blinking LED circuit and put it into your pumpkin or just show off to your family and friends! We will walk you through the circuit designing and building.",
+            "categories": "Career"
+        }
+    ]
+}	

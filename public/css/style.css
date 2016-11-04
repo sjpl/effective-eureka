@@ -1,0 +1,145 @@
+#popupbox {
+    margin: 0;
+    margin-left: 40%;
+    margin-right: 40%;
+    margin-top: 50px;
+    padding-top: 10px;
+    width: 160%;
+    height: 150px;
+    position: absolute;
+    background: #FBFBF0;
+    border: solid #000000 2px;
+    z-index: 9;
+    font-family: arial;
+    visibility: hidden;
+}
+
+.navigationbar-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.75rem 15px 0.75rem 15px;
+    /*        top right bottom left*/
+}
+
+.flexleft {
+    justify-content: flex-start;
+}
+
+.flexright {
+    justify-content: flex-end;
+}
+
+.flexspacearound {
+    justify-content: space-around;
+}
+
+.navigationbar > li {
+    /*    position: relative;*/
+    display: block;
+}
+
+.navigationbar > li > a {
+    /*    position: relative;*/
+    /*    display: block;*/
+    padding: .55rem .55rem .55rem .55rem;
+}
+
+.navigationbar-item {
+    flex-shrink: 0;
+    margin: 0 .55rem;
+}
+
+.search-form {
+    padding: 0 1rem 0 1rem;
+    flex-grow: 1;
+    min-width: 2rem;
+}
+
+.search-box {
+    /*    min-width: 2rem;*/
+    width: 100%;
+    padding: .4rem;
+    /*  background-color: #ffb;*/
+}
+
+.custom-container {
+    /*
+  padding-right: 15px;
+  padding-left: 15px;
+*/
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.flexbox {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-content: stretch;
+    align-items: stretch;
+    /*    width: 350px;*/
+    /*    height: 200px;*/
+}
+
+.flexbox > a {
+    flex: 0 1 auto;
+    align-self: stretch;
+    width: 50vw;
+}
+
+.flex-tabs {
+    border-bottom: 1px solid #ddd;
+}
+
+.flex-tabs > a > div {
+    width: 100%;
+    height: 100%;
+    /*    justify-content: center*/
+    text-align: center;
+    padding: 1rem 0 1rem 0;
+    /*      float: left;*/
+    /*  margin-bottom: -1px;*/
+}
+
+.flex-tabs > a {
+    /*  margin-right: 2px;*/
+    line-height: 1.42857143;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+}
+
+.flex-tabs > a:hover {
+    border-color: #eee #eee #ddd;
+}
+
+.flex-tabs > a > div.active,
+.flex-tabs > a:hover > div.active,
+.flex-tabs > a:focus > div.active {
+    color: #555;
+    cursor: default;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+}
+
+
+/*
+@media (min-width: 768px) {
+    .custom-container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .custom-container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .custom-container {
+        width: 1170px;
+    }
+}
+*/

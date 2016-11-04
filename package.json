@@ -1,0 +1,14 @@
+{
+  "name": "literate-spoon",
+  "description": "Setting up server",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "latest",
+    "express-handlebars": "^3.0.0",
+    "fs": "0.0.1-security",
+    "handlebars": "^4.0.5"
+  }
+}

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+
+    <title>Literate-Spoon</title>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/superhero/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <!-- <button class="btn btn-default dropdown-toggle" type="button"	data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+   						  <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+  						</button> -->
+                    <a class="btn btn-default" href="/filterpage">
+                        <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+                    </a>
+                </li>
+
+          			<li>
+            			<form class="navbar-form navbar-left" role="search">
+              				<div class="form-group">
+                                <input type="text" class="form-control" placeholder="🔎 Search">
+              				</div>
+            			</form>
+          			</li>
+
+                <li>
+                    <a class="btn btn-default" href="/addeventpage">
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="btn btn-default" href="/profilepage">
+                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="btn btn-default" href="/">
+                        <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+		<div class="row-bottom-margin" role="row">
+										 <table>
+       										<tr>
+          										<td rowspan="2"><img src="images/{{image}}" class="image"></td>
+         										<td><a href="#{{id}}">{{name}}</a></td>
+        									</tr>
+        									<tr>
+          										<td><p>Date | Time | Location</p></td>
+        									</tr>
+                          <tr>
+                            <td>
+                              <div class="dropdown">
+                                <input onclick="change()" type="button" value="Not Following" id="myButton1"></input>
+                              <!--<button id="myButton" onClick="lock(); toggleText(this.id);" class="followButton">Not Following</button>-->
+                          </div>
+                        </td>
+                          <tr>
+      									</table>
+									</div>
+
+
+    <div class="container">
+        <div class="tababble">
+            <ul class="nav nav-tabs">
+                <li>
+                    <!--class="active"-->
+                    <a href="/eventpage" data-toggle="tab">About</a></li>
+                <li>
+                    <a href="/discusspage" data-toggle="tab">Discuss</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row-bottom-margin" role="row">
+        <table>
+            <tr>
+                <td>
+                    <form class="navbar-form navbar-left" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Add to the discussion.">
+                        </div>
+                    </form>
+                </td>
+                <td>
+                    <button type="submit" class="btn btn-default" onclick="change()">Submit</button>
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td rowspan="2"><img src="images/{{image}}" class="image"></td>
+                <td>Discussion</td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Details from the discussion.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="row-bottom-margin" role="row">
+        <table>
+            <tr>
+                <td rowspan="2"><img src="images/{{image}}" class="image"></td>
+                <td>Discussion</td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Details from the discussion.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="row-bottom-margin" role="row">
+        <table>
+            <tr>
+                <td rowspan="2"><img src="images/{{image}}" class="image"></td>
+                <td>Discussion</td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Details from the discussion.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="row-bottom-margin" role="row">
+        <table>
+            <tr>
+                <td rowspan="2"><img src="images/{{image}}" class="image"></td>
+                <td>Discussion</td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Details from the discussion.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="row-bottom-margin" role="row">
+        <table>
+            <tr>
+                <td rowspan="2"><img src="images/{{image}}" class="image"></td>
+                <td>Discussion</td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Details from the discussion.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="row-bottom-margin" role="row">
+        <table>
+            <tr>
+                <td rowspan="2"><img src="images/{{image}}" class="image"></td>
+                <td>Discussion</td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Details from the discussion.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        function change() // no ';' here
+      {
+          var elem = document.getElementById("myButton1");
+          if (elem.value=="Not Following") elem.value = "Following";
+          else elem.value = "Not Following";
+      }
+      </script>
+		<!-- These lines are needed for Javascript and also enables Heroku to publish our app -->
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>

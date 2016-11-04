@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta charset="utf-8">
+
+		<title>Literate-Spoon</title>
+
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="script.js"></script>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+
+	<body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+      		<div class="container-fluid">
+				<ul class="nav navbar-nav">
+					<li class="dropdown">
+              <!-- <button class="btn btn-default dropdown-toggle" type="button"	data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+   						  <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+  						</button> -->
+            			<a class="btn btn-default" href="/filterpage">
+              				<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+            			</a>
+					</li>
+
+          			<li>
+            			<form class="navbar-form navbar-left" role="search">
+              				<div class="form-group">
+                                <input type="text" class="form-control" placeholder="🔎 Search">
+              				</div>
+            			</form>
+          			</li>
+
+					<li>
+            			<a class="btn btn-default" href="/addeventpage">
+              				<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+            			</a>
+					</li>
+
+					<li>
+            			<a class="btn btn-default" href="/profilepage">
+              				<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+            			</a>
+					</li>
+
+					<li>
+						<a class="btn btn-default" href="/hostlist">
+							<span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<div class="row-bottom-margin" role="row">
+      <table>
+            <tr>
+                <td rowspan="2"><img src="images/{{image}}" class="image"></td>
+              <td>Host Name</td>
+            </tr>
+          </table>
+    </div>
+
+    <div class="container">
+      <div class="tababble">
+       <ul class="nav nav-tabs">
+          <li ><!--class="active"-->
+            <a href="/hostpage" data-toggle="tab">Upcoming Events</a></li>
+          <li>
+            <a href="/hostpage-pastevents" data-toggle="tab">Past Events</a></li>
+       </ul>
+     </div>
+    </div>
+
+    <div class="row-bottom-margin" role="row">
+        <table>
+			<tr>
+   				<td rowspan="2"><img src="images/{{image}}" class="image"></td>
+ 				<td><a href="/eventpage">Event</a></td>
+  			</tr>
+   			<tr>
+   				<td><p>Date | Time | Location</p></td>
+   			</tr>
+		</table>
+    </div>
+    <div class="row-bottom-margin" role="row">
+        <table>
+			<tr>
+   				<td rowspan="2"><img src="images/{{image}}" class="image"></td>
+ 				<td><a href="/eventpage">Event</a></td>
+  			</tr>
+   			<tr>
+   				<td><p>Date | Time | Location</p></td>
+   			</tr>
+		</table>
+    </div>
+    <div class="row-bottom-margin" role="row">
+        <table>
+			<tr>
+   				<td rowspan="2"><img src="images/{{image}}" class="image"></td>
+ 				<td><a href="/eventpage">Event</a></td>
+  			</tr>
+   			<tr>
+   				<td><p>Date | Time | Location</p></td>
+   			</tr>
+		</table>
+    </div>
+    <div class="row-bottom-margin" role="row">
+        <table>
+			<tr>
+   				<td rowspan="2"><img src="images/{{image}}" class="image"></td>
+ 				<td><a href="/eventpage">Event</a></td>
+  			</tr>
+   			<tr>
+   				<td><p>Date | Time | Location</p></td>
+   			</tr>
+		</table>
+    </div>
+    <div class="row-bottom-margin" role="row">
+        <table>
+			<tr>
+   				<td rowspan="2"><img src="images/{{image}}" class="image"></td>
+ 				<td><a href="/eventpage">Event</a></td>
+  			</tr>
+   			<tr>
+   				<td><p>Date | Time | Location</p></td>
+   			</tr>
+		</table>
+    </div>
+    <div class="row-bottom-margin" role="row">
+        <table>
+			<tr>
+   				<td rowspan="2"><img src="images/{{image}}" class="image"></td>
+ 				<td><a href="/eventpage">Event</a></td>
+  			</tr>
+   			<tr>
+   				<td><p>Date | Time | Location</p></td>
+   			</tr>
+		</table>
+    </div>
+
+		<!-- These lines are needed for Javascript and also enables Heroku to publish our app -->
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
