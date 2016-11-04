@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
-    <title>Literate-Spoon</title>
+    <title>Effective-Eureka</title>
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/bootstrap-theme.css" rel="stylesheet">
     <!--    <link href="css/spacelab.css" rel="stylesheet">-->
@@ -26,24 +26,18 @@
     </script>
 
 </head>
-
-<body>
+<header>
     <div class="custom-container">
         <div class="navigationbar-flex navbar-default">
-            <div class="navigationbar-flexleft">
+            <div class="flexleft">
                 <a class="navigationbar-item" href="">
                     <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
                 </a>
-                <!--
-            <a class="navigationbar-item" href="">
-                <i class="fa fa-caret-down" color:black></i>
-            </a>
--->
             </div>
-            <form class="search-form">
+            <form class="search-form flexleft">
                 <input type="text" class="search-box" placeholder="Search">
             </form>
-            <div class="navigationbar-flexright">
+            <div class="flexright">
                 <a class="navigationbar-item btn btn-default" href="javascript:login('show')">
                     <span>Login</span>
                     <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
@@ -67,20 +61,27 @@
                 </a>
             </div>
         </div>
+        <div class="flexbox flex-tabs">
+            <a href="">
+                <div class="active">Events</div>
+            </a>
+            <a href="">
+                <div>Hosts</div>
+            </a>
+        </div>
+
+        <!--    <ul class="nav nav-tabs nav-justified">-->
+        <!--
+    <ul class="">
+        <li role="presentation" class="active"><a href="/">Events</a></li>
+        <li role="presentation"><a href="/hostlist">Hosts</a></li>
+    </ul>
+-->
 
     </div>
-
-
-    <!-- <div class="container"> -->
-    <div class="tababble">
-        <ul class="nav nav-tabs">
-            <li>
-                <!--class="active"-->
-                <a href="/" data-toggle="tab">Events</a></li>
-            <li>
-                <a href="/hostlist" data-toggle="tab">Hosts</a></li>
-        </ul>
-    </div>
+</header>
+<body>
+    
 
     <div class="g-grid">
         <section class="1-pad-bot-5 1-sm-pad-bot-3">
