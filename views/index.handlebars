@@ -11,11 +11,13 @@
 
     <script language="JavaScript" type="text/javascript">
         function login(showhide) {
+
             if (showhide == "show") {
                 document.getElementById('popupbox').style.visibility = "visible";
                 $("div").not().addClass("blur-me");
                 $("img").not().addClass("blur-me");
                 $("div").last().removeClass("blur-me");
+
             } else if (showhide == "hide") {
                 document.getElementById('popupbox').style.visibility = "hidden";
                 $("div").not().removeClass("blur-me");
