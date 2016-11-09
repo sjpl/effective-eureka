@@ -56,89 +56,33 @@
     </div>
 </header>
 
-<body class="container">
-    <div class="row-bottom-margin" role="row">
-        <table>
-            <tr>
-                <td rowspan="2"><img src="images/{{image}}" class="image"></td>
-                <td><a href="/eventpage">Event</a></td>
-            </tr>
-            <tr>
-                <td>
-                    <p>Date | Time | Location</p>
-                </td>
-            </tr>
-        </table>
+<body>
+    <div class="g-grid">
+        <section class="1-pad-bot-5 1-sm-pad-bot-3">
+            <div class="js-popular-events">
+                <div class="js-events-list">
+                    {{#each events}}
+                        <div class="g-cell g-cell--has-overflow g-cell-1-1 g-cell-md-1-2-g-cell-lg-1-3 1-pad-vert-3" role="row">
+                          <div class="well well-sm" style="margin-bottom:0px;" role="gridcell">
+                              <div style="display: inline-block">
+                                    <div style="display: inline-block">
+                                    <img style="height:150px;width:150px" src="{{img}}" alt="">
+                                  </div>
+                                    <div style="display: inline-block">
+                                        <a href="/eventpage" ><div>{{eventname}}</div>                                    
+                                        <div>{{date}}</div>
+                                            <div >{{location}}</div></a>
+                                        <p style="display: inline-block">Category:</p>
+                                        <a class="event-category" style="display: inline-block" href="">{{categories}}</a>
+                                    </div>
+                              </div>                         
+                        </div>
+                    </div>
+                {{/each}}
+             </div>
+            </div>
+        </section>
     </div>
-    <div class="row-bottom-margin" role="row">
-        <table>
-            <tr>
-                <td rowspan="2"><img src="images/{{image}}" class="image"></td>
-                <td><a href="/eventpage">Event</a></td>
-            </tr>
-            <tr>
-                <td>
-                    <p>Date | Time | Location</p>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="row-bottom-margin" role="row">
-        <table>
-            <tr>
-                <td rowspan="2"><img src="images/{{image}}" class="image"></td>
-                <td><a href="/eventpage">Event</a></td>
-            </tr>
-            <tr>
-                <td>
-                    <p>Date | Time | Location</p>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="row-bottom-margin" role="row">
-        <table>
-            <tr>
-                <td rowspan="2"><img src="images/{{image}}" class="image"></td>
-                <td><a href="/eventpage">Event</a></td>
-            </tr>
-            <tr>
-                <td>
-                    <p>Date | Time | Location</p>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="row-bottom-margin" role="row">
-        <table>
-            <tr>
-                <td rowspan="2"><img src="images/{{image}}" class="image"></td>
-                <td><a href="/eventpage">Event</a></td>
-            </tr>
-            <tr>
-                <td>
-                    <p>Date | Time | Location</p>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="row-bottom-margin" role="row">
-        <table>
-            <tr>
-                <td rowspan="2"><img src="images/{{image}}" class="image"></td>
-                <td><a href="/eventpage">Event</a></td>
-            </tr>
-            <tr>
-                <td>
-                    <p>Date | Time | Location</p>
-                </td>
-            </tr>
-        </table>
-    </div>
-
-    <!-- These lines are needed for Javascript and also enables Heroku to publish our app -->
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>

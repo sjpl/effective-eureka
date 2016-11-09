@@ -17,10 +17,17 @@
 
     <script language="JavaScript" type="text/javascript">
         function login(showhide) {
+            
             if (showhide == "show") {
                 document.getElementById('popupbox').style.visibility = "visible";
+                $("div").not().addClass("blur-me");
+                $("img").not().addClass("blur-me");
+                $("div").last().removeClass("blur-me");
+                
             } else if (showhide == "hide") {
                 document.getElementById('popupbox').style.visibility = "hidden";
+                $("div").not().removeClass("blur-me");
+                $("img").not().removeClass("blur-me");
             }
         }
     </script>
@@ -30,7 +37,7 @@
     <div class="custom-container">
         <div class="navigationbar-flex navbar-default">
             <div class="flexleft">
-                <a class="navigationbar-item" href="">
+                <a class="navigationbar-item" href="/filterpage">
                     <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
                 </a>
             </div>
@@ -42,23 +49,11 @@
                     <span>Login</span>
                     <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
                 </a>
-                <div id="popupbox">
-                    <form name="login" action="" method="post">
-                        <center>Username:</center>
-                        <center>
-                            <input name="username" size="14">
-                        </center>
-                        <center>Password:</center>
-                        <center>
-                            <input name="password" type="password" size="14">
-                        </center>
-                        <center><a href="/indexin">Submit</a></center>
-                        <center><a href="javascript:login('hide')">Close</a></center>
-                    </form>
-                </div>
+<!--
                 <a class="navigationbar-item" href="">
                     <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
                 </a>
+-->
             </div>
         </div>
         <div class="flexbox flex-tabs">
@@ -69,50 +64,51 @@
                 <div>Hosts</div>
             </a>
         </div>
-
-        <!--    <ul class="nav nav-tabs nav-justified">-->
-        <!--
-    <ul class="">
-        <li role="presentation" class="active"><a href="/">Events</a></li>
-        <li role="presentation"><a href="/hostlist">Hosts</a></li>
-    </ul>
--->
-
     </div>
 </header>
+
 <body>
     <div class="g-grid">
         <section class="1-pad-bot-5 1-sm-pad-bot-3">
             <div class="js-popular-events">
                 <div class="js-events-list">
                     {{#each events}}
-                        <div class="g-cell g-cell--has-overflow g-cell-1-1 g-cell-md-1-2-g-cell-lg-1-3 1-pad-vert-3" role="row">
-                          <div class="well well-sm" style="margin-bottom:0px;" role="gridcell">
-                              <div class="poster-card__header" style="display: inline-block">
-                                    <div class="poster-card__image">
-                                        <img class="img-responsive" src="{{img}}" alt="">
-                                    </div>
+                    <div class="g-cell g-cell--has-overflow g-cell-1-1 g-cell-md-1-2-g-cell-lg-1-3 1-pad-vert-3" role="row">
+                        <div class="well well-sm" style="margin-bottom:0px;" role="gridcell">
+                            <div style="display: inline-block">
+                                <div style="display: inline-block">
+                                    <img style="height:150px;width:150px" src="{{img}}" alt="">
                                 </div>
-                            <a href="#" style="display: inline-block">
-                                <div class="poster-card__body">
-                                    <div class="poster-card__title">{{eventname}}
-                                    </div>
-                                    <time class="poster-card__date"> {{time}} </time>
-                                    <div class="poster-card__venue"> {{location}}</div>
-                                </div>
-                            </a>
-                            <div href="#" class="poster-card__footer">
-                                <div class="poster-card__tags">
-                                    <p style="display: inline-block">Category: </p>
+                                <div style="display: inline-block">
+                                    <a href="/eventpage">
+                                        <div>{{eventname}}</div>
+                                        <div>{{date}}</div>
+                                        <div>{{location}}</div>
+                                    </a>
+                                    <p style="display: inline-block">Category:</p>
                                     <a class="event-category" style="display: inline-block" href="">{{categories}}</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                {{/each}}
-             </div>
+                    {{/each}}
+                </div>
             </div>
         </section>
+    </div>
+    <div id="popupbox">
+                    <form name="login" action="" method="post">
+                        <center><font color="ffffff">Username:</font></center>
+                        <center>
+                            <input name="username" size="14">
+                        </center>
+                        <center><font color="ffffff">Password:</font></center>
+                        <center>
+                            <input name="password" type="password" size="14">
+                        </center>
+                        <center><a href="/indexin"><font color="ffffff">Submit</font></a></center>
+                        <center><a href="javascript:login('hide')"><font color="ffffff">Close</font></a></center>
+                    </form>
     </div>
 </body>
 
