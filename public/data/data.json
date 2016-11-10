@@ -99,41 +99,5 @@
             "img": "img/ieee.jpg",
             "notification-detail": "Abby Gale posted to the discussion."
         }
-    ],
-    
-    "notifications": [
-        {
-            "eventname": "UCSD Candlelight Vigil for Harambe",
-            "img": "public/img/harambe.jpg",
-            "notification-detail": "John Smith has changed the time from 6:00PM to 7:00PM."
-        },
-        {
-            "eventname": "ASCE Presents: Boo Bash",
-            "img": "public/img/boobash.jpg",
-            "notification-detail": "Erica Chen changed the location to The Loft @ UCSD."
-        },
-        {
-            "eventname": "Tech Event - Blinking  LED Soldering Workshop",
-            "img": "public/img/ieee.jpg",
-            "notification-detail": "Abby Gale posted to the discussion."
-        }
-    ],
-    
-    "notifications": [
-        {
-            "eventname": "UCSD Candlelight Vigil for Harambe",
-            "img": "public/img/harambe.jpg",
-            "notification-detail": "John Smith has changed the time from 6:00PM to 7:00PM."
-        },
-        {
-            "eventname": "ASCE Presents: Boo Bash",
-            "img": "public/img/boobash.jpg",
-            "notification-detail": "Erica Chen changed the location to The Loft @ UCSD."
-        },
-        {
-            "eventname": "Tech Event - Blinking  LED Soldering Workshop",
-            "img": "public/img/ieee.jpg",
-            "notification-detail": "Abby Gale posted to the discussion."
-        }
     ]
 }	
