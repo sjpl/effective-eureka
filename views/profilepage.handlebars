@@ -1,51 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--Loading head information & navbar-->
+<script type="text/javascript" src="https://code.jquery.com/jquery.js"></script>
+<script>
+    $(function () {
+        $("#navbar").load("templates/navbar-with-exit.handlebars")
+    });
+</script>
+<div id="navbar"></div>
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta charset="utf-8">
-    <title>Effective-Eureka</title>
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/bootstrap-theme.css" rel="stylesheet">
-    <!--    <link href="css/spacelab.css" rel="stylesheet">-->
-    <link href="css/style.css" rel="stylesheet">
-    <!-- These lines are needed for Javascript and also enables Heroku to publish our app -->
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/handlebars-v4.0.5.js"></script>
-    <!--<script src="js/index.js"></script>-->
-</head>
+<!--Main body of page-->
 
-<header>
-    <div class="custom-container">
-        <div class="navigationbar-flex navbar-default">
-            <div class="flexleft">
-                <a class="navigationbar-item" href="/filterpage">
-                    <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
-                </a>
-            </div>
-            <form class="search-form flexleft">
-                <input type="text" class="search-box" placeholder="🔎 Search">
-            </form>
-            <div class="flexright">
-                <a class="navigationbar-item" href="/addeventpage">
-                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-                </a>
-                <a class="navigationbar-item" href="/profilepage">
-                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-                </a>
-                <a class="navigationbar-item" href="/indexin">
-                    <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
-                </a>
-                <!--
-                <a class="navigationbar-item" href="">
-                    <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-                </a>
--->
-            </div>
-        </div>
-    </div>
+<body>
     <div class="flexbox flex-tabs">
         <a href="/profilepage">
             <div class="active">Following</div>
@@ -54,32 +20,31 @@
             <div>Notifications</div>
         </a>
     </div>
-</header>
-
-<body>
     <div class="g-grid">
         <section class="1-pad-bot-5 1-sm-pad-bot-3">
             <div class="js-popular-events">
                 <div class="js-events-list">
                     {{#each events}}
-                        <div class="g-cell g-cell--has-overflow g-cell-1-1 g-cell-md-1-2-g-cell-lg-1-3 1-pad-vert-3" role="row">
-                          <div class="well well-sm" style="margin-bottom:0px;" role="gridcell">
-                              <div style="display: inline-block">
-                                    <div style="display: inline-block">
+                    <div class="g-cell g-cell--has-overflow g-cell-1-1 g-cell-md-1-2-g-cell-lg-1-3 1-pad-vert-3" role="row">
+                        <div class="well well-sm" style="margin-bottom:0px;" role="gridcell">
+                            <div style="display: inline-block">
+                                <div style="display: inline-block">
                                     <img style="height:150px;width:150px" src="{{img}}" alt="">
-                                  </div>
-                                    <div style="display: inline-block">
-                                        <a href="/eventpage" ><div>{{eventname}}</div>                                    
+                                </div>
+                                <div style="display: inline-block">
+                                    <a href="/eventpage">
+                                        <div>{{eventname}}</div>
                                         <div>{{date}}</div>
-                                            <div >{{location}}</div></a>
-                                        <p style="display: inline-block">Category:</p>
-                                        <a class="event-category" style="display: inline-block" href="">{{categories}}</a>
-                                    </div>
-                              </div>                         
+                                        <div>{{location}}</div>
+                                    </a>
+                                    <p style="display: inline-block">Category:</p>
+                                    <a class="event-category" style="display: inline-block" href="">{{categories}}</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                {{/each}}
-             </div>
+                    {{/each}}
+                </div>
             </div>
         </section>
     </div>
