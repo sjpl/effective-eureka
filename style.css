@@ -1,15 +1,16 @@
 #popupbox {
+    top: 0; right: 0; bottom: 0; left: 0;
     margin: 0;
-    margin-left: 40%;
-    margin-right: 40%;
-    margin-top: 50px;
-    padding-top: 10px;
-    width: 160%;
-    height: 150px;
+    margin-left: 25%;
+    margin-right: 65px;
+    margin-top: 55px;
+    padding-top: 15px;
+    width: 220px;
+    height: 330px;
     position: absolute;
-    background: #FBFBF0;
+    background-color: darkblue;
     border: solid #000000 2px;
-    z-index: 9;
+    z-index: 0;
     font-family: arial;
     visibility: hidden;
 }
@@ -122,24 +123,3 @@
     border: 1px solid #ddd;
     border-bottom-color: transparent;
 }
-
-
-/*
-@media (min-width: 768px) {
-    .custom-container {
-        width: 750px;
-    }
-}
-
-@media (min-width: 992px) {
-    .custom-container {
-        width: 970px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .custom-container {
-        width: 1170px;
-    }
-}
-*/

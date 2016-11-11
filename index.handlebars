@@ -30,25 +30,35 @@
     <div class="custom-container">
         <div class="navigationbar-flex navbar-default">
             <div class="flexleft">
-                <a class="navigationbar-item" href="/filterpage">
+                <a class="navigationbar-item" href="">
                     <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
                 </a>
             </div>
             <form class="search-form flexleft">
-                <input type="text" class="search-box" placeholder="🔎 Search">
+                <input type="text" class="search-box" placeholder="Search">
             </form>
             <div class="flexright">
-                <a class="navigationbar-item" href="/addeventpage">
-                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                <a class="navigationbar-item btn btn-default" href="javascript:login('show')">
+                    <span>Login</span>
+                    <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
                 </a>
-                <a class="navigationbar-item" href="/profilepage">
-                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-                </a>
-                <!--
+                <div id="popupbox">
+                    <form name="login" action="" method="post">
+                        <center>Username:</center>
+                        <center>
+                            <input name="username" size="14">
+                        </center>
+                        <center>Password:</center>
+                        <center>
+                            <input name="password" type="password" size="14">
+                        </center>
+                        <center><a href="/indexin">Submit</a></center>
+                        <center><a href="javascript:login('hide')">Close</a></center>
+                    </form>
+                </div>
                 <a class="navigationbar-item" href="">
                     <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
                 </a>
--->
             </div>
         </div>
         <div class="flexbox flex-tabs">
@@ -59,6 +69,15 @@
                 <div>Hosts</div>
             </a>
         </div>
+
+        <!--    <ul class="nav nav-tabs nav-justified">-->
+        <!--
+    <ul class="">
+        <li role="presentation" class="active"><a href="/">Events</a></li>
+        <li role="presentation"><a href="/hostlist">Hosts</a></li>
+    </ul>
+-->
+
     </div>
 </header>
 <body>
@@ -66,19 +85,28 @@
         <section class="1-pad-bot-5 1-sm-pad-bot-3">
             <div class="js-popular-events">
                 <div class="js-events-list">
-                    {{#each hosts}}
+                    {{#each events}}
                         <div class="g-cell g-cell--has-overflow g-cell-1-1 g-cell-md-1-2-g-cell-lg-1-3 1-pad-vert-3" role="row">
                           <div class="well well-sm" style="margin-bottom:0px;" role="gridcell">
-                              <div class="poster-card__header" >
-                                    <div style="display: inline-block">
-                                        <img class="img-responsive" style="height:150px;width:150px" src="{{img}}" alt="">
+                              <div class="poster-card__header" style="display: inline-block">
+                                    <div class="poster-card__image">
+                                        <img class="img-responsive" src="{{img}}" alt="">
                                     </div>
-                                    <div style="display: inline-block" >
-                                        <a href="/hostpage" >
-                                            {{hostname}}                               
-                                    </a></div>
-                                    
                                 </div>
+                            <a href="#" style="display: inline-block">
+                                <div class="poster-card__body">
+                                    <div class="poster-card__title">{{eventname}}
+                                    </div>
+                                    <time class="poster-card__date"> {{time}} </time>
+                                    <div class="poster-card__venue"> {{location}}</div>
+                                </div>
+                            </a>
+                            <div href="#" class="poster-card__footer">
+                                <div class="poster-card__tags">
+                                    <p style="display: inline-block">Category: </p>
+                                    <a class="event-category" style="display: inline-block" href="">{{categories}}</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 {{/each}}
