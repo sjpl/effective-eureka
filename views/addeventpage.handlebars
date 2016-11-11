@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -45,73 +46,112 @@
         </div>
 
 </header>
-  <body class="container">
 
-    <div class="row-bottom-margin" role="row">
-      <table>
-        <tr>
-          <td>Add Event</td>
-          <td><a class="btn btn-default" href="#">Import 
+<body class="container">
+
+    <form id="addEventForm" role="form" method="get" action="/addEvent">
+        <h4 style="color:#3399ff">
+            <b>Choose method for adding new event</b>
+        </h4>
+
+        <table>
+            <tr>
+                <td colspan="3">
+                    <a class="btn btn-default" href="#">Import Event
                       <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-                  </a></td>
-        </tr>
-        <tr>
-          <th>Time</th>
-        </tr>       
-        <tr>
-          <td>Start</td>
-          <td><form class="navbar-form navbar-left" role="search">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Tuesdays, Oct 18 2016">
-            </div>
-        </form></td>
-          <td>
-            <form class="navbar-form navbar-left" role="search">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="1pm">
-            </div>
-        </form>
-          </td>
-        </tr>
+                    </a>(Unimplemented)
+                </td>
+            </tr>
 
-        <tr>
-          <td>End</td>
-          <td><form class="navbar-form navbar-left" role="search">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Tuesdays, Oct 18 2016">
-            </div>
-        </form></td>
-          <td>
-            <form class="navbar-form navbar-left" role="search">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="2pm">
-            </div>
-        </form>
-          </td>
+            <tr>
+                <td>
+                    <h5 style="color:#3399ff; text-align:center">
+                        <b>-OR-</b>
+                    </h5>
+                </td>
+            </tr>
 
-        </tr>
+            <tr>
+                <td colspan="3">
+                    <h5><b>Input Event Information</b></h5>
+                </td>
+            </tr>
+            <tr>
+                <td><b>Title: </b></td>
+                <td colspan="2">
+                    <div class="navbar-form">
+                        <input type="text" class="form-control" placeholder="Title of event." name="eventname">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Starting Time:</b>
+                </td>
+                <td>
+                    <div class="navbar-form">
+                        <input type="text" class="form-control" placeholder="Oct 18 2016" name="date">
+                    </div>
+                </td>
+                <td>
+                    <div class="navbar-form">
+                        <input type="text" class="form-control" placeholder="1:00 PM" name="time">
+                    </div>
+                </td>
+            </tr>
 
-        <tr>
-          <td>Details</td>
-          <td><form class="navbar-form navbar-left" role="search">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Details about the event.">
-            </div>
-        </form></td>
-        </tr>
-        <tr>
-          <td>Add Photo</td>
-          <td><a class="btn btn-default" href="#">Import 
+            <tr>
+                </div>
+                <td>
+                    <b>Ending Time:</b>
+                </td>
+                <td>
+                    <div class="navbar-form">
+                        <input type="text" class="form-control" placeholder="Oct 18 2016" name="endddate">
+                    </div>
+                </td>
+                <td>
+                    <div class="navbar-form">
+                        <input type="text" class="form-control" placeholder="2:00 PM" name="endtime">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><b>Location:</b></td>
+                <td colspan="2">
+                    <div class="navbar-form">
+                        <input type="text" class="form-control" placeholder="Event location." name="location">
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td><b>About</b></td>
+                <td colspan="2">
+                    <div class="navbar-form">
+                        <input type="text" class="form-control" placeholder="Details about the event." name="about">
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td><b>Add Photo</b></td>
+                <td colspan="2">
+                    <a class="btn btn-default" href="#">Import
                       <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-                  </a></td>
-        </tr>
-        <tr>
-          <td><a class="btn btn-default" href="/">Submit 
-                      
-                  </a></td>
-        </tr>
-      </table>
-    </div>
-    <!-- These lines are needed for Javascript and also enables Heroku to publish our app -->
-  </body>
+                    </a>(Unimplemented)
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+<!--                    <a href="/">-->
+                        <input type="submit" id="submitBtn" class="btn btn-default" value="Submit" href= "/"></input>
+<!--                    </a>-->
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
 </html>
