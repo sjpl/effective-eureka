@@ -43,7 +43,8 @@ app.get('/profilepage-notification', function (request, response) {
 app.get('/filterpage', function (request, response) {
     response.render('filterpage', dataVar);});
 app.get('/addeventpage', function (request, response) {
-    response.render('addeventpage', dataVar);});
+    response.render('addeventpage', dataVar);
+});
 app.get('/eventpage', function (request, response) {
     response.render('eventpage', dataVar);});
 app.get('/aboutpage', function (request, response) {
@@ -70,6 +71,7 @@ app.get('/addEvent', function(request, response) {
     console.log(newEvent);
     
     dataVar.events.push(newEvent);
+//    console.log(window.location.href);
 });
 
 app.listen(app.get('port'), function () {
