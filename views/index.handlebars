@@ -30,84 +30,90 @@
                 $("img").not().removeClass("blur-me");
             }
         }
+    
     </script>
 
-</head>
-<header>
-    <div class="custom-container">
+    
+    <header>
+        
         <div class="navigationbar-flex navbar-default">
-            <div class="flexleft">
-                <a class="navigationbar-item" href="/filterpage">
-                    <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
-                </a>
-            </div>
-            <form class="search-form flexleft">
-                <input type="text" class="search-box" placeholder="Search">
+            <h2><font color = "darkblue">&nbsp&nbsp Event Finder Extreme</font></h2>
+        </div>
+                <h7>&nbsp;</h7>
+        <div class="landing">
+            
+            <form action= "./indexin">    
+                <h5>&nbsp &nbsp &nbsp Email:
+                  <input type="text" placeholder=" Email" name="email" required>
+                </h5>
+                <h5>Password: 
+                  <input type="password" placeholder=" Password" name="password" required>
+                    &nbsp 
+                </h5>
+            
+                    <p>
+                  <input type="checkbox" checked="checked"> Remember me &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                  
+                  <button type="submit">Submit</button>
+                    </p>
             </form>
-            <div class="flexright">
-                <a class="navigationbar-item btn btn-default" href="javascript:login('show')">
-                    <span>Login</span>
-                    <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+            
+                <div>
+                  New?
+                <a class="navigationbar-item" href="javascript:login('show')">
+                  Sign Up
                 </a>
-<!--
-                <a class="navigationbar-item" href="">
-                    <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-                </a>
--->
-            </div>
-        </div>
-        <div class="flexbox flex-tabs">
-            <a href="/">
-                <div class="active">Events</div>
-            </a>
-            <a href="/hostlist">
-                <div>Hosts</div>
-            </a>
-        </div>
-    </div>
-</header>
-
-<body>
-    <div class="g-grid">
-        <section class="1-pad-bot-5 1-sm-pad-bot-3">
-            <div class="js-popular-events">
-                <div class="js-events-list">
-                    {{#each events}}
-                    <div class="g-cell g-cell--has-overflow g-cell-1-1 g-cell-md-1-2-g-cell-lg-1-3 1-pad-vert-3" role="row">
-                        <div class="well well-sm" style="margin-bottom:0px;" role="gridcell">
-                            <div style="display: inline-block">
-                                <div style="display: inline-block">
-                                    <img style="height:150px;width:150px" src="{{img}}" alt="">
-                                </div>
-                                <div style="display: inline-block">
-                                    <a href="/eventpage">
-                                        <div>{{eventname}}</div>
-                                        <div>{{date}}</div>
-                                        <div>{{location}}</div>
-                                    </a>
-                                    <p style="display: inline-block">Category:</p>
-                                    <a class="event-category" style="display: inline-block" href="">{{categories}}</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {{/each}}
                 </div>
-            </div>
-        </section>
+                <h4>&nbsp;</h4>
+            <h3>Explore Local Events</h3>
+            <p>Browse and Filter through events near you!</p>
+                <span class="glyphicon glyphicon-download" aria-hidden="true"></span>
+            <h3>Host Your Own Event</h3>
+            <p>Create an account and import your own online event.</p>
+                <span class="glyphicon glyphicon-download" aria-hidden="true"></span>
+            <h3>Get Notified!</h3>
+            <p>Recieve push notifications for important updates.</p>
+            <p></p>
+        </div>
+        
+        
+    </header>
+    
+    <center><font color="ffffff">Event Finder</font></center>
+    </head>
+<body>
+    <div class="info" style= "font-size:xx-small"><font color= "black", size="2">
+    &nbsp
+    </font>
+    <font color= "black", face= "arial">
+    Grant Nelson✵Allan Martinez✵Shannon Laub</font>
+        <font color= "black", face= "arial">
+    UC San Diego HCI Design 2016</font>
     </div>
     <div id="popupbox">
-                    <form name="login" action="" method="post">
-                        <center><font color="ffffff">Username:</font></center>
-                        <center>
-                            <input name="username" size="14">
-                        </center>
-                        <center><font color="ffffff">Password:</font></center>
-                        <center>
-                            <input name="password" type="password" size="14">
-                        </center>
-                        <center><a href="/indexin"><font color="ffffff">Submit</font></a></center>
-                        <center><a href="javascript:login('hide')"><font color="ffffff">Close</font></a></center>
+                    <form name="signup" action="" method="post">
+                        <center><font color="lightblue", size="4">Create an Account:</font></center>
+                        <center><font color=lightblue> </font></center> <p></p>
+                        <center><font color="lightblue">
+                            Host Name:
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</font><input name="hostname" placeholder=" Username" size="14"></center>
+                        <center><font color="lightblue">
+                            <p></p>
+                            Email:
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</font>
+                            <input name="username" placeholder=" Email Address" size="14"></center>
+                        <center><font color="lightblue">
+                            <p></p>
+                            Enter Password:
+                            &nbsp&nbsp&nbsp</font>
+                            <input name="password" placeholder=" Password"type="password" size="14"></center>
+                        <center><font color="lightblue">
+                            <p></p>
+                            Confirm Password:</font>
+                            <input name="password" type="password" placeholder=" Password" size="14"></center> <p></p>
+                        <center><a href="/indexin"><font color="lightblue">Submit</font></a></center>
+                        <center><a href="javascript:login('hide')"><font color="lightblue">Cancel</font></a></center>
                     </form>
     </div>
 </body>
