@@ -145,13 +145,36 @@
 
             <tr>
                 <td>
-<!--                    <a href="/">-->
-                        <input type="submit" id="submitBtn" class="btn btn-default" value="Submit" href= "/"></input>
-<!--                    </a>-->
+                    <!--                    <a href="/">-->
+                    <input type="submit" id="submitBtn" class="btn btn-default" value="Add Event" ></input>
+<!--    onclick="javascript:redirect();"-->
+                    <!--                    </a>-->
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a class="btn btn-default" href="/">Return to Events list.  
+                    </a>
                 </td>
             </tr>
         </table>
     </form>
 </body>
+<!--
+<script>
+    function redirect() {
+        console.log("hi");
+        console.log(window.location.hostname);
+        //        console.log(window.location.href = '../');
+        //        var indexpage = ;
+        //        window.location.assign(indexpage);
+        //        window.location.href = '/path';
+        window.location.assign('http://localhost:8080/');
+        console.log(window.location.href);
+        console.log("bye");
+    }
+</script>
+-->
 
 </html>
