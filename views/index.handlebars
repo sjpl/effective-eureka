@@ -17,32 +17,31 @@
 
     <script language="JavaScript" type="text/javascript">
         function login(showhide) {
-            
+
             if (showhide == "show") {
                 document.getElementById('popupbox').style.visibility = "visible";
                 $("div").not().addClass("blur-me");
                 $("img").not().addClass("blur-me");
                 $("div").last().removeClass("blur-me");
-                
+
             } else if (showhide == "hide") {
                 document.getElementById('popupbox').style.visibility = "hidden";
                 $("div").not().removeClass("blur-me");
                 $("img").not().removeClass("blur-me");
             }
         }
-    
     </script>
 
-    
+
     <header>
-        
+
         <div class="navigationbar-flex navbar-default">
             <h3><font color = "darkblue">Event Finder Extreme</font></h3>
         </div>
-                <h7>&nbsp;</h7>
+        <h7>&nbsp;</h7>
         <div class="landing">
-            
-            <form action= "./indexin">    
+
+            <form action="./indexin">
                 <h5>&nbsp &nbsp &nbsp Email:
                   <input type="text" placeholder=" Email" name="email" required>
                 </h5>
@@ -50,71 +49,79 @@
                   <input type="password" placeholder=" Password" name="password" required>
                     &nbsp 
                 </h5>
-            
-                    <p>
-                  <input type="checkbox" checked="checked"> Remember me &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                  
-                  <button type="submit">Submit</button>
-                    </p>
+
+                <p>
+                    <input type="checkbox" checked="checked"> Remember me &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+                    <button type="submit">Submit</button>
+                </p>
             </form>
-            
-                <div>
-                  New?
+
+            <div>
+                New?
                 <a class="navigationbar-item" href="javascript:login('show')">
                   Sign Up
                 </a>
-                </div>
-                <h4>&nbsp;</h4>
+            </div>
+            <h4>&nbsp;</h4>
             <h3>Explore Local Events</h3>
             <p>Browse and Filter through events near you!</p>
-                <span class="glyphicon glyphicon-download" aria-hidden="true"></span>
+            <span class="glyphicon glyphicon-download" aria-hidden="true"></span>
             <h3>Host Your Own Event</h3>
             <p>Create an account and import your own online event.</p>
-                <span class="glyphicon glyphicon-download" aria-hidden="true"></span>
+            <span class="glyphicon glyphicon-download" aria-hidden="true"></span>
             <h3>Get Notified!</h3>
             <p>Recieve push notifications for important updates.</p>
             <p></p>
         </div>
-        
-        
+
+
     </header>
-    
+
     <center><font color="ffffff">Event Finder</font></center>
-    </head>
+</head>
+
 <body>
-    <div class="info" style= "font-size:xx-small"><font color= "black", size="2">
+    <div class="info" style="font-size:xx-small"><font color="black" , size="2">
     &nbsp
     </font>
-    <font color= "black", face= "arial">
+        <font color="black" , face="arial">
     Grant Nelson✵Allan Martinez✵Shannon Laub</font>
-        <font color= "black", face= "arial">
+        <font color="black" , face="arial">
     UC San Diego HCI Design 2016</font>
     </div>
     <div id="popupbox">
-                    <form name="signup" action="" method="post">
-                        <center><font color="lightblue", size="4">Create an Account:</font></center>
-                        <center><font color=lightblue> </font></center> <p></p>
-                        <center><font color="lightblue">
+        <form name="signup" action="" method="post">
+            <center><font color="lightblue" , size="4">Create an Account:</font></center>
+            <center><font color=lightblue> </font></center>
+            <p></p>
+            <center><font color="lightblue">
                             Host Name:
-                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</font><input name="hostname" placeholder=" Username" size="14"></center>
-                        <center><font color="lightblue">
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</font>
+                <input name="hostname" placeholder=" Username" size="14">
+            </center>
+            <center><font color="lightblue">
                             <p></p>
                             Email:
                             &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
                             &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</font>
-                            <input name="username" placeholder=" Email Address" size="14"></center>
-                        <center><font color="lightblue">
+                <input name="username" placeholder=" Email Address" size="14">
+            </center>
+            <center><font color="lightblue">
                             <p></p>
                             Enter Password:
                             &nbsp&nbsp&nbsp</font>
-                            <input name="password" placeholder=" Password"type="password" size="14"></center>
-                        <center><font color="lightblue">
+                <input name="password" placeholder=" Password" type="password" size="14">
+            </center>
+            <center><font color="lightblue">
                             <p></p>
                             Confirm Password:</font>
-                            <input name="password" type="password" placeholder=" Password" size="14"></center> <p></p>
-                        <center><a href="/indexin"><font color="lightblue">Submit</font></a></center>
-                        <center><a href="javascript:login('hide')"><font color="lightblue">Cancel</font></a></center>
-                    </form>
+                <input name="password" type="password" placeholder=" Password" size="14">
+            </center>
+            <p></p>
+            <center><a href="/indexin"><font color="lightblue">Submit</font></a></center>
+            <center><a href="javascript:login('hide')"><font color="lightblue">Cancel</font></a></center>
+        </form>
     </div>
 </body>
 
