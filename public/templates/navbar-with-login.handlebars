@@ -12,7 +12,23 @@
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="js/handlebars-v4.0.5.js"></script>
     <script src="js/index.js"></script>
+
 </head>
+
+<script language="JavaScript" type="text/javascript">
+    function login(showhide) {
+        if (showhide == "show") {
+            document.getElementById('popupbox').style.visibility = "visible";
+            $("div").not().addClass("blur-me");
+            $("img").not().addClass("blur-me");
+            $("div").last().removeClass("blur-me");
+        } else if (showhide == "hide") {
+            document.getElementById('popupbox').style.visibility = "hidden";
+            $("div").not().removeClass("blur-me");
+            $("img").not().removeClass("blur-me");
+        }
+    }
+</script>
 
 <header>
     <div class="custom-container">
@@ -23,18 +39,18 @@
                 </a>
             </div>
             <form class="search-form flexleft">
-                <input type="text" class="search-box" placeholder="🔎 Search">
+                <input type="text" class="search-box" placeholder="Search">
             </form>
             <div class="flexright">
-                <a class="navigationbar-item" href="/addeventpage">
-                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                <a class="navigationbar-item btn btn-default" href="javascript:login('show')">
+                    <span>Login</span>
+                    <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
                 </a>
-                <a class="navigationbar-item" href="/profilepage">
-                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-                </a>
-                <a class="navigationbar-item" href="/">
+                <!--
+                <a class="navigationbar-item" href="">
                     <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
                 </a>
+-->
             </div>
         </div>
     </div>
