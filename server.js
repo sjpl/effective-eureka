@@ -32,10 +32,10 @@ app.get('/indexin',indexin.view);
 
 app.get('/addeventpage', addeventpage.view);
 app.get('/discusspage', discusspage.view);
-app.get('/eventpage', eventpage.view);
+app.get('/eventpage/:eventname', eventpage.view);
 app.get('/filterpage', filterpage.view);
 app.get('/hostlist', hostlist.view);
-app.get('/hostpage', hostpage.view);
+app.get('/hostpage/:hostname', hostpage.view);
 app.get('/hostpage-pastevents', hostpagepastevents.view);
 app.get('/profilepage', profilepage.view);
 app.get('/profilepage-notification', profilePageNotification.view);
