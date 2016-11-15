@@ -3,11 +3,11 @@ var img = "";
 
 
 exports.view = function(req, res){
-    var hostName = req.params.eventname;  
+    var hostName = req.params.hostname;  
     
     for( var i = 0; i < data.hosts.length; i++){
         if(data.hosts[i].hostname == hostName){
-            img = data.events[i].img;
+            img = data.hosts[i].img;
         }
     }
 //    
@@ -18,10 +18,7 @@ exports.view = function(req, res){
 //    console.log('time: ' + time);
     
     res.render('hostpage', {
-        'eventname': eventName,
-        'location': loc,
-        'img': img,
-        'date': date,
-        'time': time
+        'hostname': hostName,
+        'img': img
     });
 }
