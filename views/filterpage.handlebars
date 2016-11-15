@@ -3,15 +3,50 @@
 
 <!--Loading head information & navbar-->
 <script type="text/javascript" src="https://code.jquery.com/jquery.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
     $(function () {
         $("#navbar").load("templates/navbar-with-exit.handlebars")
     });
 </script>
+    
 <div id="navbar"></div>
 
 <!--Main body of page-->
-<body class="container">
+  
+    
+<body>
+    <div><p>&nbsp</p></div>
+    <div class="contain">
+      <div class="carousel">
+        <div class="a">
+        <div class="item"><img style="height:80px;width:80px; vertical-align:middle;" src="{{img}}" alt=""></div>
+        </div>
+        <div class="b">
+        <div class="item"><img style="height:80px;width:80px; vertical-align:middle;" src="{{img}}" alt=""></div>
+        </div>
+        <div class="c">
+        <div class="item"><img style="height:80px;width:80px; vertical-align:middle;" src="{{img}}" alt=""></div>
+        </div>
+        <div class="d">
+        <div class="item"><img style="height:80px;width:80px; vertical-align:middle;" src="{{img}}" alt=""></div>
+        </div>
+        <div class="e">
+        <div class="item"><img style="height:80px;width:80px; vertical-align:middle;" src="{{img}}" alt=""></div>
+        </div>
+        <div class="f">
+        <div class="item"><img style="height:80px;width:80px; vertical-align:middle;" src="{{img}}" alt=""></div>
+        </div>
+      </div>
+    </div>
+    <div class="next">Next</div>
+    <div class="prev">Prev</div>
+    <div><p>&nbsp</p></div>
+    <div><p>&nbsp</p></div>
+    <div><p>&nbsp</p></div>
+    <div><p>&nbsp</p></div>
+    
+    
     <center><h4><b>Filter Events by Category:</b></h4></center>
     <button type="button" class="btn btn-default btn-lg btn-block">Health</button>
     <button type="button" class="btn btn-default btn-lg btn-block">Academic/Knowledge</button>
@@ -20,6 +55,10 @@
     <button type="button" class="btn btn-default btn-lg btn-block">Recreation</button>
     <button type="button" class="btn btn-default btn-lg btn-block">Expression</button>
     <center><p>(Currently not implemented yet.)</p></center>
+    
 </body>
 
+    
+
 </html>
+
