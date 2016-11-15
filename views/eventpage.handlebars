@@ -113,12 +113,28 @@
                                         style ="width: 150px; padding: 5px">
                                 </div>
                         </div>
+                        <script>
+                            $(function(){
+                                $("#details").click(function(){
+                                    console.log("this works!");
+                                    $("#details").attr('class', 'active');                                          $("#discussion").attr('class', '');
+                                    $("#contents").html("<p>{{about}}</p>");
+                                });
+                            });
+                            $(function(){
+                                $("#discussion").click(function(){
+                                    console.log("this works too!");
+                                    $("#discusion").attr('class', 'active');                                        $("#details").attr('class', '');
+                                    $("#contents").html("<p> ayy lmao</p>");
+                                });
+                            });
+                        </script>
                         <div class="flexbox flex-tabs">
-                            <a href="">
-                                <div class="active">Details</div>
+                            <a href="#">
+                                <div class="active" id ="details">Details</div>
                             </a>
-                            <a href="/discusspage">
-                                <div>Discussion</div>
+                            <a href="#">
+                                <div id="discussion">Discussion</div>
                             </a>
                         </div>
                     </div>
@@ -127,7 +143,9 @@
         </section>
     </div>
 
-    <p>Want to get some FREE cookies and Pan de Muertos? Want to learn more about Mexican culture and Dia de los Muertos? Want to do some coloring to relieve your stress from midterms? Come join CAN's Dia de los Muertos Event for some (limited) yummy treats!</p>
+    <div id = "contents">  
+        {{about}}
+    </div>
     
 </body>
 

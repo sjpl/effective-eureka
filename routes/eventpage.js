@@ -3,6 +3,7 @@ var loc = "";
 var img = "";
 var date = "";
 var time = ""; 
+var about = "";
 
 exports.view = function(req, res){
     var eventName = req.params.eventname;  
@@ -13,6 +14,7 @@ exports.view = function(req, res){
             img = data.events[i].img;
             date = data.events[i].date;
             time = data.events[i].time;
+            about = data.events[i].about;
         }
     }
 //    
@@ -27,6 +29,7 @@ exports.view = function(req, res){
         'location': loc,
         'img': img,
         'date': date,
-        'time': time
+        'time': time,
+        'about': about
     });
 }
