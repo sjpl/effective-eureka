@@ -4,7 +4,7 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery.js"></script>
 <script>
     $(function () {
-        $("#navbar").load("templates/navbar-with-exit.handlebars")
+        $("#navbar").load("templates/navbar.handlebars")
     });
 </script>
 <div id="navbar"></div>
@@ -27,12 +27,12 @@
                     {{#each events}}
                     <div class="g-cell g-cell--has-overflow g-cell-1-1 g-cell-md-1-2-g-cell-lg-1-3 1-pad-vert-3" role="row">
                         <div class="well well-sm" style="margin-bottom:0px;" role="gridcell">
-                            <div style="display: inline-block">
-                                <div style="display: inline-block">
-                                    <img style="height:150px;width:150px" src="{{img}}" alt="">
+                                <div style="display: inline-block;vertical-align:middle;">
+                                    <img style="height:80px;width:80px;display:table-cell; vertical-align:text-top;" src="{{img}}" alt="">
                                 </div>
-                                <div style="display: inline-block">
-                                    <a href="/eventpage">
+                                <div style="display: inline-block;vertical-align:middle;">
+                                    <a href="/eventpage/{{eventname}}">
+                                        <p></p>
                                         <div>{{eventname}}</div>
                                         <div>{{date}}</div>
                                         <div>{{location}}</div>
@@ -41,7 +41,6 @@
                                     <a class="event-category" style="display: inline-block" href="">{{categories}}</a>
                                 </div>
                             </div>
-                        </div>
                     </div>
                     {{/each}}
                 </div>

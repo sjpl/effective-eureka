@@ -4,6 +4,7 @@ var img = "";
 var date = "";
 var time = ""; 
 var about = "";
+//console.log("hi");
 
 exports.view = function(req, res){
     var eventName = req.params.eventname;  
@@ -17,7 +18,11 @@ exports.view = function(req, res){
             about = data.events[i].about;
         }
     }
-//    
+//    console.log("hi");
+//    img = "../public/" + img;    
+//    console.log(img);
+    
+    
 //    console.log('eventname: ' + eventName);
 //    console.log('location: ' + loc);
 //    console.log('img: ' + img);
