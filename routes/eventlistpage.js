@@ -3,5 +3,5 @@ var data = require('../data.json');
 
 //Load page
 exports.view = function(req, res){
-  res.render('hostlist',data);
+  res.render('eventlistpage',data);
 };
