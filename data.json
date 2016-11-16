@@ -8,7 +8,15 @@
             "img": "img/diadelosmuertos.jpg",
             "host": "UCSD Cultural Awareness Network",
             "about": "Want to get some FREE cookies and Pan de Muertos? Want to learn more about Mexican culture and Dia de los Muertos? Want to do some coloring to relieve your stress from midterms? Come join CAN's Dia de los Muertos Event for some (limited) yummy treats!",
-            "categories": "Expression"
+            "categories": "Expression",
+            "notifications": [
+                {
+                    "img": "lorempixel.com",
+                    "name": "Baeson",
+                    "post": "This event looks awesome, can't wait!!",
+                    "day-timeposted":  "Oct 28 * 1:23PM"
+                }
+            ]
         },
 
         {
