@@ -1,0 +1,39 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>Effective-Eureka</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <!--    <link href="css/spacelab.css" rel="stylesheet">-->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- These lines are needed for Javascript and also enables Heroku to publish our app -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="js/handlebars-v4.0.5.js"></script>
+    <script src="js/index.js"></script>
+</head>
+
+<header>
+    <div class="custom-container">
+        <div class="navigationbar-flex navbar-default">
+            <div class="flexleft" dropdown>
+                <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+            </div>
+            <form class="search-form flexleft">
+                <input type="text" class="search-box" placeholder="🔎 Search">
+            </form>
+            <div class="flexright">
+                <a class="navigationbar-item" href="/addeventpage">
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                </a>
+                <a class="navigationbar-item" href="/profilepage">
+                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                </a>
+                <a class="navigationbar-item" href="/">
+                    <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
