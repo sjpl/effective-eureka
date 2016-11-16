@@ -127,7 +127,7 @@
                                     console.log("this works too!");
                                     $("#discussion").attr('class', 'active');                                        $("#details").attr('class', '');
                                     //$("#contents").html("");
-                                     document.getElementById("contents").innerHTML='<object type="type/html" data="discusspage.html" ></object>';
+                                    $("#contents").html("{{>discusspage}}");
                                     
                                 });
                             });
