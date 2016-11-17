@@ -10,16 +10,96 @@
 </script>
 <div id="navbar"></div>
 
-<!--Main body of page-->
-<body class="container">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .carousel .item {
+            height: 300px;
+        }
+        
+        .item img {
+/*            position: absolute;*/
+/*            top: 0;*/
+/*            left: 0;*/
+            min-height: 300px;
+        }
+        
+        .carousel-inner > .item > img,
+        .carousel-inner > .item > a > img {
+            width: 100%;
+            height: 200px;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <br>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+
+                <div class="item active" href="/eventpage">
+                    <a href="/eventpage/ASCE%20Presents:%20Boo%20Bash">
+                        <img class="img img-responsive" src="img/boobash.jpg" alt="Chania" width="460" height="345">
+                    </a>
+                </div>
+
+
+                <div class="item">
+                    <a href="/eventpage/Dia%20de%20los%20Muertos%20Event">
+                        <img class="img img-responsive" src="img/diadelosmuertos.jpg" alt="Chania" width="460" height="345">
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a href="/eventpage/UCSD%20Candlelight%20Vigil%20for%20Harambe">
+                        <img class="img img-responsive" src="img/harambe.jpg" alt="Flower" width="460" height="345">
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
     <center><h4><b>Filter Events by Category:</b></h4></center>
-    <button type="button" class="btn btn-default btn-lg btn-block">Health</button>
-    <button type="button" class="btn btn-default btn-lg btn-block">Academic/Knowledge</button>
-    <button type="button" class="btn btn-default btn-lg btn-block">Career/Professional</button>
-    <button type="button" class="btn btn-default btn-lg btn-block">Community/Outreach</button>
-    <button type="button" class="btn btn-default btn-lg btn-block">Recreation</button>
-    <button type="button" class="btn btn-default btn-lg btn-block">Expression</button>
-    <center><p>(Currently not implemented yet.)</p></center>
+    <a href="eventlistpage">
+        <button type="button" class="btn btn-default btn-lg btn-block">Health</button></a>
+    <a href="eventlistpage">
+        <button type="button" class="btn btn-default btn-lg btn-block">Academic/Knowledge</button></a>
+    <a href="eventlistpage">
+        <button type="button" class="btn btn-default btn-lg btn-block">Career/Professional</button></a>
+    <a href="eventlistpage">
+        <button type="button" class="btn btn-default btn-lg btn-block">Community/Outreach</button></a>
+    <a href="eventlistpage">
+        <button type="button" class="btn btn-default btn-lg btn-block">Recreation</button></a>
+    <a href="eventlistpage">
+        <button type="button" class="btn btn-default btn-lg btn-block">Expression</button></a>
+    <center><p>(Filtering not implemented yet.)</p></center>
 </body>
 
 </html>
