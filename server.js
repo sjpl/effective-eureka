@@ -32,8 +32,10 @@ app.get('/landingpage', landingpage.view);
 
 app.get('/addeventpage', addeventpage.view);
 app.get('/discusspage', discusspage.view);
+app.get('/eventlistpage',eventlistpage.view);
 app.get('/eventlistpage/:category',eventlistpage.view);
 app.get('/eventpage/:eventname', eventpage.view);
+app.get('/eventpage2/:eventname', eventpage.view2);
 app.get('/hostlistpage', hostlistpage.view);
 app.get('/hostpage/:hostname', hostpage.view);
 app.get('/hostpage-pastevents', hostpagepastevents.view);
