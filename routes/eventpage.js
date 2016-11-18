@@ -4,7 +4,7 @@ var img = "";
 var date = "";
 var time = ""; 
 var about = "";
-//console.log("hi");
+var notifications;
 
 exports.view = function(req, res){
     var eventName = req.params.eventname;  
@@ -16,13 +16,10 @@ exports.view = function(req, res){
             date = data.events[i].date;
             time = data.events[i].time;
             about = data.events[i].about;
+            notifications = data.events[i].notifications
         }
     }
-//    console.log("hi");
-//    img = "../public/" + img;    
-//    console.log(img);
-    
-    
+//    
 //    console.log('eventname: ' + eventName);
 //    console.log('location: ' + loc);
 //    console.log('img: ' + img);
@@ -35,6 +32,7 @@ exports.view = function(req, res){
         'img': img,
         'date': date,
         'time': time,
-        'about': about
+        'about': about,
+        'notifications': notifications
     });
 }

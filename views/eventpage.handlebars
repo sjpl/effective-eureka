@@ -118,12 +118,11 @@
                                 });
                             });
                             $(function(){
-                                $("#discussion").click(function(){
-                                    console.log("this works too!");
-                                    $("#discussion").attr('class', 'active');                                        $("#details").attr('class', '');
-                                    //$("#contents").html("");
-                                    $("#contents").html("{{>discusspage}}");
-                                    
+                                $("#discussion").on('click', function(){
+                                    console.log("thsis works too!");
+                                    $("#discussion").attr('class', 'active');
+                                    $("#details").attr('class', '');
+                                    $("#contents").html('{{>discusspage}}');
                                 });
                             });
                         </script>

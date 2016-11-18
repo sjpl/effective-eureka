@@ -13,15 +13,34 @@
 <!--Main body of page-->
 
 <body>
+     <script>
+        $(function(){
+            $("#events").click(function(){
+                console.log("this works!");
+                $("#events").attr('class', 'active');                                         
+                $("#hosts").attr('class', '');
+                $("#contents").html("{{>eventlist}}");
+            });
+        });
+        $(function(){
+            $("#hosts").on('click', function(){
+                console.log("thsis works too!");
+                $("#hosts").attr('class', 'active');
+                $("#events").attr('class', '');
+                $("#contents").html('{{>hostlistpage}}');
+            });
+        });
+    </script>
     <div class="flexbox flex-tabs">
-        <a href="/eventlistpage">
-            <div class="active">Events</div>
+        <a href="#">
+            <div id="events" class="active">Events</div>
         </a>
-        <a href="/hostlistpage">
-            <div>Hosts</div>
+        <a href="#">
+            <div id="hosts">Hosts</div>
         </a>
     </div>
-    <div class="g-grid">
+    <div id="contents">
+        <div class="g-grid">
         <section class="1-pad-bot-5 1-sm-pad-bot-3">
             <div class="js-popular-events">
                 <div class="js-events-list">
@@ -47,6 +66,7 @@
                 </div>
             </div>
         </section>
+    </div>
     </div>
 </body>
 
