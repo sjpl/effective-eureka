@@ -4,8 +4,8 @@ var data = require('../data.json');
 //Load page
 exports.view = function(req, res){
   var cate = req.params.category;
-  console.log(cate);
-    
+//  console.log("Category: " + cate);
+//    if (cate == undefined) cate=='all';
   if(cate == 'all'){
       filtered = data;
       res.render('eventlistpage', data);
