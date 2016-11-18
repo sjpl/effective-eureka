@@ -94,27 +94,38 @@
                                             {
                                                 padding:0 10px 0 5px;
                                             }
-                                            .btn{
-                                                background: lightgray;
+                                            .classA {
+                                                background:lightgray;
                                             }
 
-                                            /** on active **/
-
-                                            .btn:focus{
-                                                background: lightgreen;
+                                            .classB {
+                                               background:lightgreen; 
                                             }
-                                            
+    
                                         </style>
                                 <div class="dropdown">
                                     <script>
                                          function change() // no ';' here
                                          {
-                                             var elem = document.getElementById("myButton1");
-                                                if (elem.value == "Follow") elem.value = "Following";
+                                             var elem = document.getElementById("select");
+                                                if (elem.value == "Follow") 
+                                                    elem.value = "Following";
                                                 else elem.value = "Follow";
                                             }
+                                                function colorchange(id)
+                                            {
+                                              var el = document.getElementById(id);
+                                              var currentClass = el.getAttribute("class");
+                                              if(currentClass == 'classA')
+                                              {
+                                                  el.setAttribute("class", "classB");
+                                              } else {
+                                                 el.setAttribute("class", "classA");
+                                              }
+
+                                            }
                                         </script>
-                                        <input class ="btn" onclick="change()" type="button" value="Follow" id="myButton1"
+                                        <input onclick="colorchange('select'), change()" class="classA"  type="button" value="Follow" id="select"
                                         style ="width: 150px; padding: 5px">
                                 </div>
                         </div>
