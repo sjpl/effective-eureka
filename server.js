@@ -31,9 +31,8 @@ app.get('/', index.view);
 app.get('/landingpage', landingpage.view);
 
 app.get('/addeventpage', addeventpage.view);
-app.get('/addeventpage2', addeventpage.view2);
 app.get('/discusspage', discusspage.view);
-app.get('/eventlistpage',eventlistpage.view);
+app.get('/eventlistpage/:category',eventlistpage.view);
 app.get('/eventpage/:eventname', eventpage.view);
 app.get('/hostlistpage', hostlistpage.view);
 app.get('/hostpage/:hostname', hostpage.view);
@@ -42,8 +41,6 @@ app.get('/profilepage', profilepage.view);
 app.get('/profilepage-notification', profilePageNotification.view);
 
 app.get('/addEvent', addeventpage.add);
-app.get('/addEvent2', addeventpage.add2);
-
 
 app.listen(app.get('port'), function () {
     console.log('Node app is running on port', app.get('port'));

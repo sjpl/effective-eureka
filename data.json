@@ -5,7 +5,7 @@
             "time": "12:30 PM",
             "location": "Revelle Plaza",
             "date": "10/28/2016", 
-            "img": "img/diadelosmuertos.jpg",
+            "img": "http://lorempixel.com/400/200",
             "host": "UCSD Cultural Awareness Network",
             "about": "Want to get some FREE cookies and Pan de Muertos? Want to learn more about Mexican culture and Dia de los Muertos? Want to do some coloring to relieve your stress from midterms? Come join CAN's Dia de los Muertos Event for some (limited) yummy treats!",
             "categories": "Expression",
@@ -24,7 +24,7 @@
             "time": "4:00 PM",
             "location": "Sixth College Lodge",
             "date": "10/28/2016", 
-            "img": "img/pumpkinpatch.jpg",
+            "img": "http://lorempixel.com/400/200",
             "host": "UCSD Sixth College",
             "about": "Celebrate the fall season with Snoopy's Pumpkin Patch!",
             "categories": "Recreation"
@@ -35,7 +35,7 @@
             "time": "5:00 PM",
             "location": "Solis 109",
             "date": "10/28/2016", 
-            "img": "img/vr.jpg",
+            "img": "http://lorempixel.com/400/200",
             "host": "Virtual Reality Club",
             "about": "Interested in developing for Virtual Reality, or even just making your own game? Our experienced VR Club mentors will be teaching an introduction to the Unity Game Engine, VR Club's tool of choice! We'll be going over the Unity interface, some helpful tricks and features, and some introductory scripting in C#. If you're working on a project or hoping to actually create VR experiences, this technical workshop is definitely for you! Hope to see you there!",
             "categories": "Career"
@@ -46,7 +46,7 @@
             "time": "7:00 PM",
             "location": "UCSD Geisel Library",
             "date": "10/28/16", 
-            "img": "img/harambe.jpg",
+            "img": "http://lorempixel.com/400/200",
             "host": "Random UCSD Student",
             "about": "It has been four months since the Great Harambe left our world. To commemorate our noble savior, we will be hosting a candlelight vigil outside of Geisel Library. Please feel free to invite your friends, family and other Harambaeites. Thank you. And May Harambe be with you. We are unfortunately not able to sell candles at the event, please bring your own. Hosted by the Harlan Harambe 16",
             "categories": "Recreation"
@@ -57,7 +57,7 @@
             "time": "8:00 PM",
             "location": "The Loft @ UCSD",
             "date": "10/28/2016", 
-            "img": "img/boobash.jpg",
+            "img": "http://lorempixel.com/400/200",
             "host": "UCSD AS Concerts & Events",
             "about": "Start Halloween weekend right with our Boo Bash! Come dressed in your spookiest costume and monster mash the night away!",
             "categories": "Recreation"
