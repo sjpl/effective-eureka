@@ -86,7 +86,15 @@
                                             {
                                                 padding:0 10px 0 5px;
                                             }
-                                            
+                                            .btn{
+                                                background: lightgray;
+                                            }
+
+                                            /** on active **/
+
+                                            .btn:focus{
+                                                background: lightgreen;
+                                            }
                                         </style>
                             <div class="dropdown">
                                 <script>
@@ -97,7 +105,7 @@
                                             else elem.value = "Follow";
                                         }
                                     </script>
-                                    <input onclick="change()" type="button" value="Follow" id="myButton1"
+                                    <input class ="btn" onclick="change()" type="button" value="Follow" id="myButton1"
                                     style ="width: 150px; padding: 5px">
                                 </div>                   
                         </div>
