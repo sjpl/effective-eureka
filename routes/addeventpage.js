@@ -30,24 +30,3 @@ exports.add = function(request,response) {
     data.events.push(newEvent);
     response.render('addeventpage',data);    
 }
-
-exports.add2 = function(request,response) {
-     console.log("yay, addEvent just ran!");
-//    console.log(request.query.date);
-//    console.log(request.query.time);
-    
-    var newEvent = 
-        {
-            eventname: request.query.eventname,
-            time: request.query.time,
-            date: request.query.date,
-            location: request.query.location,
-            about: request.query.about,
-            img: "http://lorempixel.com/400/400/abstract",
-            categories: "Other"
-        };
-    console.log(newEvent);
-    
-    data.events.push(newEvent);
-    response.render('addeventpage2',data);    
-}
