@@ -25,6 +25,7 @@ var hostpage = require('./routes/hostpage');
 var hostpagepastevents = require('./routes/hostpage-pastevents');
 var profilepage = require('./routes/profilepage');
 var profilePageNotification = require('./routes/profilepage-notification');
+var loginfunction = require('./routes/login');
 
 //Loading pages on request.
 app.get('/', index.view);
@@ -43,6 +44,7 @@ app.get('/profilepage', profilepage.view);
 app.get('/profilepage-notification', profilePageNotification.view);
 
 app.get('/addEvent', addeventpage.add);
+app.get('/login', loginfunction.view);
 
 app.listen(app.get('port'), function () {
     console.log('Node app is running on port', app.get('port'));
