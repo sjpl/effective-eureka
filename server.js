@@ -45,6 +45,7 @@ app.get('/profilepage-notification', profilePageNotification.view);
 
 app.get('/addEvent', addeventpage.add);
 app.get('/login', loginfunction.view);
+app.get('/create', loginfunction.create);
 
 app.listen(app.get('port'), function () {
     console.log('Node app is running on port', app.get('port'));
