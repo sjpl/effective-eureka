@@ -24,7 +24,7 @@
             }
         }
     </script>
-
+    
 </head>
 <header>
     <div class="custom-container">
@@ -53,7 +53,6 @@
 </header>
 
 <!--Main body of page-->
-
 <body class="container">
     <div class="g-grid">
         <section class="1-pad-bot-5 1-sm-pad-bot-3">
@@ -65,8 +64,9 @@
                                 <table>
                                     <tr>
                                         <style type="text/css">
-                                            td {
-                                                padding: 0 10px 0 5px;
+                                            td
+                                            {
+                                                padding:0 10px 0 5px;
                                             }
                                         </style>
                                         <td>
@@ -74,69 +74,82 @@
                                         </td>
                                         <td>
                                             <div style="display: inline-block">
-                                                <h3>{{eventname}}</h3>
-                                                <p style="display: inline-block" id="date">
-                                                    {{date}}
-                                                </p>
-                                                <p style="display: inline-block" id="time">
-                                                    {{time}}
-                                                </p>
-                                                <p id="location">
-                                                    {{location}}
-                                                </p>
-                                            </div>
+                                        <h3>{{eventname}}</h3>
+                                        <p style="display: inline-block" id="date">
+                                            {{date}}
+                                        </p>
+                                        <p style="display: inline-block" id="time">
+                                            {{time}}
+                                        </p>
+                                        <p id="location">
+                                            {{location}}
+                                        </p>
+                                    </div>
                                         </td>
                                     </tr>
-                                </table>
+                                </table> 
                             </div>
                             <style type="text/css">
-                                .dropdown {
-                                    padding: 0 10px 0 5px;
-                                }
-                                
-                                .classA {
-                                    background: lightgray;
-                                }
-                                
-                                .classB {
-                                    background: lightgreen;
-                                }
-                            </style>
-                            <div class="dropdown">
-                                <script>
-                                    function change() // no ';' here
-                                    {
-                                        var elem = document.getElementById("myButton1");
-                                        if (elem.value == "Not Following") elem.value = "Following";
-                                        else elem.value = "Not Following";
-                                    }
-                                </script>
-                                <input onclick="change()" type="button" value="Not Following" id="myButton1" style="width: 150px; padding: 5px">
-                            </div>
+                                            .dropdown
+                                            {
+                                                padding:0 10px 0 5px;
+                                            }
+                                            .classA {
+                                                background:lightgray;
+                                            }
+
+                                            .classB {
+                                               background:lightgreen; 
+                                            }
+    
+                                        </style>
+                                <div class="dropdown">
+                                    <script>
+                                         function change() // no ';' here
+                                         {
+                                             var elem = document.getElementById("select");
+                                                if (elem.value == "Follow") 
+                                                    elem.value = "Following";
+                                                else elem.value = "Follow";
+                                            }
+                                                function colorchange(id)
+                                            {
+                                              var el = document.getElementById(id);
+                                              var currentClass = el.getAttribute("class");
+                                              if(currentClass == 'classA')
+                                              {
+                                                  el.setAttribute("class", "classB");
+                                              } else {
+                                                 el.setAttribute("class", "classA");
+                                              }
+
+                                            }
+                                        </script>
+                                        <input onclick="colorchange('select'), change()" class="classA"  type="button" value="Follow" id="select"
+                                        style ="width: 150px; padding: 5px">
+                                </div>
                         </div>
                         <script>
-                            $(function () {
-                                $("#details").click(function () {
+                            $(function(){
+                                $("#details").click(function(){
                                     console.log("this works!");
-                                    $("#details").attr('class', 'active');
-                                    $("#discussion").attr('class', '');
+                                    $("#details").attr('class', 'active');                                          $("#discussion").attr('class', '');
                                     $("#contents").html("<p>{{about}}</p>");
                                 });
                             });
-                            $(function () {
-                                $("#discussion").click(function () {
+                            $(function(){
+                                $("#discussion").click(function(){
                                     console.log("this works too!");
-                                    $("#discussion").attr('class', 'active');
-                                    $("#details").attr('class', '');
+                                    $("#discussion").attr('class', 'active');                                        $("#details").attr('class', '');
                                     //$("#contents").html("");
-                                    document.getElementById("contents").innerHTML = '<object type="type/html" data="discusspage.html" ></object>';
-
+                                     document.getElementById("contents").innerHTML='<object type="type/html" data="discusspage.html" ></object>';
+                                    
                                 });
                             });
                         </script>
                         <div class="flexbox flex-tabs">
                             <a href="#">
-                                <div class="active" id="details">Details</div>
+                                <div class="active" id ="details">Details</div>
                             </a>
                             <a href="#">
                                 <div id="discussion">Discussion</div>
@@ -148,10 +161,10 @@
         </section>
     </div>
 
-    <div id="contents">
+    <div id = "contents">  
         {{about}}
     </div>
-
+    
 </body>
 
 </html>
