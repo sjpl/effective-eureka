@@ -2,12 +2,18 @@
 <html lang="en">
 
 <!--Loading head information & navbar-->
-<script type="text/javascript" src="https://code.jquery.com/jquery.js"></script>
-<script>
-    $(function () {
-        $("#navbar").load("templates/navbar.handlebars")
-    });
-</script>
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/event.css" rel="stylesheet">
+    <script type="text/javascript" src="https://code.jquery.com/jquery.js"></script>
+    <script src="/js/event.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://d3kt63i4n3r3r8.cloudfront.net/assets/examples/hammer-1.1.1-74c3a245b2081b735186d31209e4569f.js"></script>
+    
+    <script>
+        $(function () {
+            $("#navbar").load("templates/navbar.handlebars")
+        });
+    </script>
 <div id="navbar"></div>
 
 <!--Main body of page-->
@@ -20,40 +26,26 @@
                 <div class="active">Hosts</div>
             </a>
         </div>
-    <div class="g-grid">
-        <section class="1-pad-bot-5 1-sm-pad-bot-3">
-            <div class="js-popular-events">
-                <div class="js-events-list">
-                    {{#each hosts}}
-                        <div class="g-cell g-cell--has-overflow g-cell-1-1 g-cell-md-1-2-g-cell-lg-1-3 1-pad-vert-3" role="row">
-                          <div class="well well-sm" style="margin-bottom:0px;" role="gridcell">
-                              <div class="poster-card__header" >
-                                  <table>
-                                    <tr>
-                                        <style type="text/css">
-                                            td
-                                            {
-                                                padding:0 10px 0 10px;
-                                            }
-                                        </style>
-                                        <td>
-                                            <img class="img-responsive" style="height:150px;width:150px" src="{{img}}" alt="">
-                                        </td>
-                                        <td>
-                                            <a href="/hostpage/{{hostname}}" >
-                                            {{hostname}} 
-                                            </a>
-                                        </td>
-                                    </tr>
-                                  </table>              
+        <div class="well well-sm" style="margin-bottom:0px;" role="gridcell">  
+        <div style="display: inline-block;vertical-align:middle;">
+                    
+                        {{#each hosts}}
+                                <a> <p></p></a>
+                        
+                                <a href="/eventpage/{{hostname}}">
+                        <li>
+                            <div style="pointer-events: none; font-size: 6px; font-size: 14px;display: inline-block;vertical-align:middle;">
+                                <img style="height:90px;width:90px;display:table-cell; vertical-align:text-top;" src="{{img}}" alt="">
                             </div>
-                        </div>
-                    </div>
-                {{/each}}
-             </div>
-            </div>
-        </section>
-    </div>
+                            <div style="pointer-events: none; font-size: 6px; font-size: 14px; display: inline-block;vertical-align:middle;">
+                                    <div>{{hostname}}</div>
+                            </div>
+                            </li>
+                                    
+                                </a>
+                      {{/each}}
+                              
+                              </div></div>
 </body>
 
 </html>

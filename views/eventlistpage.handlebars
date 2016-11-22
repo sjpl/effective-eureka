@@ -10,11 +10,14 @@
     <link href="/css/bootstrap-theme.css" rel="stylesheet">
     <!--    <link href="css/spacelab.css" rel="stylesheet">-->
     <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/event.css" rel="stylesheet">
     <!-- These lines are needed for Javascript and also enables Heroku to publish our app -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="/js/handlebars-v4.0.5.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
+    <script src="/js/event.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://d3kt63i4n3r3r8.cloudfront.net/assets/examples/hammer-1.1.1-74c3a245b2081b735186d31209e4569f.js"></script>
     <script language="JavaScript" type="text/javascript">
         function login(showhide) {
             if (showhide == "show") {
@@ -23,6 +26,7 @@
                 document.getElementById('popupbox').style.visibility = "hidden";
             }
         }
+        
     </script>
     
 </head>
@@ -54,7 +58,7 @@
 
 <!--Main body of page-->
 
-<body>
+<body style="margin-bottom: 0;">
     <div class="flexbox flex-tabs">
         <a href="/eventlistpage/all">
             <div class="active">Events</div>
@@ -63,33 +67,40 @@
             <div>Hosts</div>
         </a>
     </div>
+    
+    <div class="well well-sm" style="margin-bottom:0px;" role="gridcell">  <div style="display: inline-block;vertical-align:middle;">
     <div class="g-grid">
-        <section class="1-pad-bot-5 1-sm-pad-bot-3">
             <div class="js-popular-events">
                 <div class="js-events-list">
                     {{#each events}}
-                    <div class="g-cell g-cell--has-overflow g-cell-1-1 g-cell-md-1-2-g-cell-lg-1-3 1-pad-vert-3" role="row">
-                        <div class="well well-sm" style="margin-bottom:0px;" role="gridcell">
-                            <div style="display: inline-block;vertical-align:middle;">
-                                <img style="height:80px;width:80px;display:table-cell; vertical-align:text-top;" src="{{img}}" alt="">
+                    
+    <a> <p></p></a>
+                            <div class="delete" ><p></p></div>
+                            
+                            <a href="/eventpage/{{eventname}}">
+                            <li>
+                            <div style="pointer-events: none; font-size: 6px; font-size: 14px;display: inline-block;vertical-align:middle;">
+                                <img style="height:90px;width:90px;display:table-cell; vertical-align:text-top;" src="{{img}}" alt="">
                             </div>
-                            <div style="display: inline-block;vertical-align:middle;">
-                                <a href="/eventpage/{{eventname}}">
+                            <div style="pointer-events: none; font-size: 6px; font-size: 14px; display: inline-block;vertical-align:middle;">
+                                
                                     <p></p>
-                                    <div>{{eventname}}</div>
-                                    <div>{{date}}</div>
-                                    <div>{{location}}</div>
-                                </a>
-                                <p style="display: inline-block">Category:</p>
-                                <a class="event-category" style="display: inline-block" href="">{{categories}}</a>
+                                    {{eventname}} <br />
+                                    {{date}} <br />
+                                    {{location}} <br />
+                                    <p style="display: inline-block">Category:</p>
+                                    {{categories}}
                             </div>
-                        </div>
-                    </div>
+                            </li>
+                            </a>
+                        
+                        
                     {{/each}}
                 </div>
             </div>
-        </section>
     </div>
+    </div></div>
+    
 </body>
 
 </html>
