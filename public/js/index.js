@@ -12,10 +12,11 @@ $(document).ready(function () {
  */
 function initializePage() {
     console.log("Javascript connected!");
+//    $.material.init(); //Use if files are downloaded manually.
 
     // calculating margin-left to align it to center;
-    var width = $('.justified').width();
-    $('.justified').css('margin-left', '-' + (width / 2)+'px');
+//    var width = $('.justified').width();
+//    $('.justified').css('margin-left', '-' + (width / 2)+'px');
 
 }
 

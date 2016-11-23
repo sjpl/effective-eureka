@@ -1,5 +1,5 @@
 {
-  "name": "literate-spoon",
+  "name": "effective-eureka",
   "description": "Setting up server",
   "main": "server.js",
   "scripts": {
@@ -8,7 +8,6 @@
   "dependencies": {
     "express": "latest",
     "express-handlebars": "^3.0.0",
-    "fs": "0.0.1-security",
-    "handlebars": "^4.0.5"
+    "handlebars": "^4.0.5",
   }
 }
