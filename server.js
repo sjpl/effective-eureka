@@ -1,5 +1,5 @@
 var express = require('express');
-var handlebars = require('express-handlebars')
+var handlebars = require('express-handlebars');
 var app = express();
 
 //set the port of our application 
@@ -25,6 +25,7 @@ var hostpage = require('./routes/hostpage');
 var hostpagepastevents = require('./routes/hostpage-pastevents');
 var profilepage = require('./routes/profilepage');
 var profilePageNotification = require('./routes/profilepage-notification');
+var testpage = require('./routes/testpage');
 
 //Loading pages on request.
 app.get('/', index.view);
@@ -41,6 +42,7 @@ app.get('/hostpage/:hostname', hostpage.view);
 app.get('/hostpage-pastevents', hostpagepastevents.view);
 app.get('/profilepage', profilepage.view);
 app.get('/profilepage-notification', profilePageNotification.view);
+app.get('/testpage', testpage.view);
 
 app.get('/addEvent', addeventpage.add);
 
