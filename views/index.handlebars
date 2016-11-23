@@ -42,7 +42,7 @@
         <h7>&nbsp;</h7>
         <div class="landing">
 
-            <form action="./landingpage">
+            <form action="/login" method="get">
                 <h5>&nbsp &nbsp &nbsp Email:
                   <input type="text" placeholder=" Email" name="email" required>
                 </h5>
@@ -54,7 +54,7 @@
                 <p>
                     <input type="checkbox" checked="checked"> Remember me &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 
-                    <button type="submit">Submit</button>
+                    <button type="submit" id="login_btn">Login</button>
                 </p>
             </form>
 
@@ -92,7 +92,7 @@
     UC San Diego HCI Design 2016</font>
     </div>
     <div id="popupbox">
-        <form name="signup" action="" method="post">
+        <form name="signup" action="/create" method="get">
             <center><font color="lightblue" , size="4">Create an Account:</font></center>
             <center><font color=lightblue> </font></center>
             <p></p>
@@ -117,10 +117,10 @@
             <center><font color="lightblue">
                             <p></p>
                             Confirm Password:</font>
-                <input name="password" type="password" placeholder=" Password" size="14">
+                <input name="password2" type="password" placeholder=" Password" size="14">
             </center>
             <p></p>
-            <center><a href="/landingpage"><font color="lightblue">Submit</font></a></center>
+            <center><button type="submit" id="create_btn"><font color="lightblue">Submit</font></button></center>
             <center><a href="javascript:login('hide')"><font color="lightblue">Cancel</font></a></center>
         </form>
     </div>

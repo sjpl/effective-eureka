@@ -107,5 +107,16 @@
             "img": "img/ieee.jpg",
             "notification-detail": "Abby Gale posted to the discussion."
         }
+    ],
+    
+    "accounts": [
+        {
+            "username": "alleznitraman",
+            "password": "allan"
+        },
+        {
+            "username": "ashketchum",
+            "password": "pikachu"
+        }
     ]
 }	
