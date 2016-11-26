@@ -14,8 +14,12 @@ exports.view = function(req, res){
       }
   });
 
+  var passingUser = {
+    "username": usuario
+  }
+    
   if(verification.length != 0){
-      res.render('landingpage',data);
+      res.render('landingpage', passingUser);
   }
   else{
       console.log("try again bro");
@@ -56,9 +60,13 @@ exports.create = function(req, res){
             password: contrasena
         };
     console.log(newAccount);
+      
+    var passingUser = {
+     "username": usuario
+    }
     
     data.accounts.push(newAccount);
-    res.render('landingpage',data); 
+    res.render('landingpage', passingUser); 
   }
   else{
       console.log("try agian bro");
