@@ -12,6 +12,7 @@
 <!--Main body of page-->
 
 <body>
+<!--
     <div class="flexbox flex-tabs">
         <a href="/profilesettingspage">
             <div class="active">Host Information</div>
@@ -20,9 +21,24 @@
             <div>Your Events</div>
         </a>
     </div>
+-->
 
     <div class="container">
-        
+        <h3>User Information</h3>
+        <p></p>
+        <form>
+            <div class="input-group">
+                <span class="input-group-addon">Name</span>
+                <input style="background-color:transparent" id="name" type="text" class="form-control" name="name" placeholder="{{username}}" readonly>
+            </div>
+            <p></p>
+            <div class="input-group">
+                <span class="input-group-addon">Email</span>
+                <input style="background-color:transparent" id="email" type="text" class="form-control" name="email" placeholder="{{email}}" readonly>
+            </div>
+        </form>
+        <p><br></p>
+        <center><a href="/" class="btn btn-primary">Sign Out</a></center>
     </div>
 
     <a href="/profilesettingpage" class="btn btn-circle btn-primary"><i class="glyphicon glyphicon-cog"></i></a>
