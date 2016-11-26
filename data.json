@@ -112,11 +112,13 @@
     "accounts": [
         {
             "username": "alleznitraman",
-            "password": "allan"
+            "password": "allan",
+            "email": "example@gmail.com"
         },
         {
             "username": "ashketchum",
-            "password": "pikachu"
+            "password": "pikachu",
+            "email": "example@gmail.com"
         }
     ]
 }	

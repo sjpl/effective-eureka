@@ -27,26 +27,27 @@
                     {{#each events}}
                     <div class="g-cell g-cell--has-overflow g-cell-1-1 g-cell-md-1-2-g-cell-lg-1-3 1-pad-vert-3" role="row">
                         <div class="well well-sm" style="margin-bottom:0px;" role="gridcell">
-                                <div style="display: inline-block;vertical-align:middle;">
-                                    <img style="height:80px;width:80px;display:table-cell; vertical-align:text-top;" src="{{img}}" alt="">
-                                </div>
-                                <div style="display: inline-block;vertical-align:middle;">
-                                    <a href="/eventpage/{{eventname}}">
-                                        <p></p>
-                                        <div>{{eventname}}</div>
-                                        <div>{{date}}</div>
-                                        <div>{{location}}</div>
-                                    </a>
-                                    <p style="display: inline-block">Category:</p>
-                                    <a class="event-category" style="display: inline-block" href="">{{categories}}</a>
-                                </div>
+                            <div style="display: inline-block;vertical-align:middle;">
+                                <img style="height:80px;width:80px;display:table-cell; vertical-align:text-top;" src="{{img}}" alt="">
                             </div>
+                            <div style="display: inline-block;vertical-align:middle;">
+                                <a href="/eventpage/{{eventname}}">
+                                    <p></p>
+                                    <div>{{eventname}}</div>
+                                    <div>{{date}}</div>
+                                    <div>{{location}}</div>
+                                </a>
+                                <p style="display: inline-block">Category:</p>
+                                <a class="event-category" style="display: inline-block" href="">{{categories}}</a>
+                            </div>
+                        </div>
                     </div>
                     {{/each}}
                 </div>
             </div>
         </section>
     </div>
+    <a href="/profilesettingspage" class="btn btn-circle btn-primary"><i class="glyphicon glyphicon-cog"></i></a>
     {{>googleAnalytics}}
 </body>
 

@@ -1,5 +1,8 @@
 #popupbox {
-    top: 0; right: 0; bottom: 0; left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     margin: 0;
     margin-left: 25%;
     margin-right: 65px;
@@ -14,13 +17,16 @@
     font-family: arial;
     visibility: hidden;
 }
+
+
 /*
 body {
     padding-top: 60px;
 }
 */
+
 .blur-me {
-  filter: blur(2px);
+    filter: blur(2px);
 }
 
 .navigationbar-flex {
@@ -29,6 +35,8 @@ body {
     align-items: center;
     padding: 0.75rem 15px 0.75rem 15px;
     /*        top right bottom left*/
+/*    position:fixed;*/
+/*    flexboxes cannot have a fixed position*/
 }
 
 .flexleft {
@@ -143,4 +151,24 @@ body {
     display: flex;
     flex-direction: column;
     padding: 0.75rem 100px 0.75rem 100px;
+}
+
+.btn-circle {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    padding: 8px 8px;
+    font-size: 18px;
+/*    line-height: 1.428571429;*/
+    line-height: 1.5;
+    border-radius: 25px;
+    
+    position: fixed; 
+/*    or absolute?*/
+    bottom: 5vw;
+    right: 5vw;
+}
+
+.btn:focus {
+    outline: none !important;
 }
