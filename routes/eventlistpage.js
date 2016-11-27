@@ -6,7 +6,7 @@ exports.view = function(req, res){
   var cate = req.params.category;
 //  console.log("Category: " + cate);
 //    if (cate == undefined) cate=='all';
-  if(cate == 'all'){
+  if(cate == 'all' || cate == null){
       filtered = data;
       res.render('eventlistpage', data);
   }
