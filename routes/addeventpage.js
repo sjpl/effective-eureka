@@ -12,16 +12,17 @@ exports.view2 = function(req, res){
 
 exports.add = function(request,response) {
      console.log("yay, addEvent just ran!");
-    console.log(request.query.timedate);
+//    console.log(request.query.timedate);
     timedate = request.query.timedate;
-    console.log(typeof(timedate));
+    //timedate = yyyy-mm-ddT00:00
+//    console.log(typeof(timedate));
     timedate = timedate.split("T");
-    console.log(timedate);
+//    console.log(timedate);
     var newEvent = 
         {
             eventname: request.query.eventname,
-            time: timedate[1],
             date: timedate[0],
+            time: timedate[1],
             location: request.query.location,
             about: request.query.about,
             img: "http://lorempixel.com/400/400/abstract",
