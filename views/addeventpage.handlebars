@@ -28,12 +28,12 @@
             <h5><b>Input Event Information</b></h5>
 
             <div class="input-group">
-                <span class="input-group-addon">Title</span>
+                <span class="input-group-addon">Title*</span>
                 <input type="text" class="form-control" name="eventname" placeholder="Title of event. Max length: 25 characters." required maxlength="25">
             </div>
             <p></p>
             <div class="input-group">
-                <span class="input-group-addon">Starting Time</span>
+                <span class="input-group-addon">Starting Time*</span>
                 <input type="datetime-local" class="form-control" name="timedate" required>
             </div>
             <p></p>
@@ -60,6 +60,7 @@
                 </div>
             </div>
             <p></p>
+            <p>*Required fields.</p>
             <input type="submit" id="submitBtn" class="btn btn-primary" value="Add Event"></input>
             <a class="btn btn-primary" href="/eventlistpage/all">Cancel Event Creation  
             </a>
