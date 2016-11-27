@@ -11,118 +11,61 @@
 <div id="navbar"></div>
 
 <!--Main body of page-->
-<body class="container">
-    <form id="addEventForm" role="form" method="get" action="/addEvent">
-        <h4 style="color:#3399ff">
+
+<body>
+    <div class="container">
+        <form id="addEventForm" role="form" method="get" action="/addEvent">
+            <h4 style="color:#3399ff">
             <b>Choose method for adding new event</b>
         </h4>
+            <a class="btn btn-default" href="#">Import Event
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+            </a> (Unimplemented)
 
-        <table>
-            <tr>
-                <td colspan="3">
-                    <a class="btn btn-default" href="#">Import Event
-                      <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-                    </a> (Unimplemented)
-                </td>
-            </tr>
+            <h5 style="color:#3399ff; text-align:center">
+                <b>-OR-</b>
+            </h5>
+            <h5><b>Input Event Information</b></h5>
 
-            <tr>
-                <td>
-                    <h5 style="color:#3399ff; text-align:center">
-                        <b>-OR-</b>
-                    </h5>
-                </td>
-            </tr>
-
-            <tr>
-                <td colspan="3">
-                    <h5><b>Input Event Information</b></h5>
-                </td>
-            </tr>
-            <tr>
-                <td><b>Title: </b></td>
-                <td colspan="2">
-                    <div class="navbar-form">
-                        <input type="text" class="form-control" placeholder="Title of event." name="eventname">
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <b>Starting Time:</b>
-                </td>
-                <td>
-                    <div class="navbar-form">
-                        <input type="date" class="form-control" placeholder="Oct 18 2016" name="date">
-                    </div>
-                </td>
-                <td>
-                    <div class="navbar-form">
-                        <input type="time" class="form-control" placeholder="1:00 PM" name="time">
-                    </div>
-                </td>
-            </tr>
-
-            <tr>
+            <div class="input-group">
+                <span class="input-group-addon">Title</span>
+                <input type="text" class="form-control" name="eventname" placeholder="Title of event. Max length: 25 characters." required maxlength="25">
+            </div>
+            <p></p>
+            <div class="input-group">
+                <span class="input-group-addon">Starting Time</span>
+                <input type="datetime-local" class="form-control" name="timedate" required>
+            </div>
+            <p></p>
+            <div class="input-group">
+                <span class="input-group-addon">Ending Time</span>
+                <input type="datetime-local" class="form-control" name="endtimedate">
+            </div>
+            <p></p>
+            <div class="input-group">
+                <span class="input-group-addon">Location</span>
+                <input type="text" class="form-control" name="location" placeholder="Location of event.">
+            </div>
+            <p></p>
+            <div class="input-group">
+                <span class="input-group-addon">About</span>
+                <input type="text" class="form-control" name="about" placeholder="Details about the event.">
+            </div>
+            <p></p>
+            <div class="input-group">
+                <span class="input-group-addon">Add Photo</span>
+                <input style="background-color:transparent" type="text" class="form-control" name="about" placeholder="(Unimplemented)" disabled>
+                <div class="input-group-btn">
+                    <button class="btn btn-default" type="button">Browse...</button>
                 </div>
-                <td>
-                    <b>Ending Time:</b>
-                </td>
-                <td>
-                    <div class="navbar-form">
-                        <input type="date" class="form-control" placeholder="Oct 18 2016" name="endddate">
-                    </div>
-                </td>
-                <td>
-                    <div class="navbar-form">
-                        <input type="time" class="form-control" placeholder="2:00 PM" name="endtime">
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td><b>Location:</b></td>
-                <td colspan="2">
-                    <div class="navbar-form">
-                        <input type="text" class="form-control" placeholder="Event location." name="location">
-                    </div>
-                </td>
-            </tr>
+            </div>
+            <p></p>
+            <input type="submit" id="submitBtn" class="btn btn-primary" value="Add Event"></input>
+            <a class="btn btn-primary" href="/eventlistpage">Return to Events list.  
+            </a>
 
-            <tr>
-                <td><b>About</b></td>
-                <td colspan="2">
-                    <div class="navbar-form">
-                        <input type="text" class="form-control" placeholder="Details about the event." name="about">
-                    </div>
-                </td>
-            </tr>
-
-            <tr>
-                <td><b>Add Photo</b></td>
-                <td colspan="2">
-                    <a class="btn btn-default" href="#">Import
-                      <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-                    </a> (Unimplemented)
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-                    <!--                    <a href="/">-->
-                    <input type="submit" id="submitBtn" class="btn btn-default" value="Add Event"></input>
-                    <!--    onclick="javascript:redirect();"-->
-                    <!--                    </a>-->
-
-                </td>
-            </tr>
-            <tr>
-                <td colspan = 2>
-                    <a class="btn btn-default" href="/eventlistpage">Return to Events list.  
-                    </a>
-                </td>
-            </tr>
-        </table>
-    </form>
+        </form>
+    </div>
     {{>googleAnalytics}}
 </body>
 <!--
