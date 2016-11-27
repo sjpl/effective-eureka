@@ -114,11 +114,9 @@
                                         var elem = document.getElementById("followButton");
                                         if (elem.value == "Not Following") elem.value = "Following";
                                         else elem.value = "Not Following";
-                                        
-                                        ga('send','event','followToggle','click');
                                     }
                                 </script>
-                                <input onclick="change()" type="button" value="Not Following" id="followButton" style="width: 150px; padding: 5px">
+                                <input onclick="change(), ga('send','event','followToggle','click')" type="button" value="Not Following" id="followButton" style="width: 150px; padding: 5px">
                             </div>
 
                             {{else}}
@@ -143,7 +141,7 @@
 
                                     }
                                 </script>
-                                <input onclick="colorchange('followButton'), change()" class="classA" type="button" value="Follow" id="followButton" style="width: 150px; padding: 5px">
+                                <input onclick="colorchange('followButton'), change(), ga('send','event','followToggle','click')" class="classA" type="button" value="Follow" id="followButton" style="width: 150px; padding: 5px">
                             </div>
                             {{/if}}
                         </div>
