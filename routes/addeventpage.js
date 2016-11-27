@@ -30,5 +30,5 @@ exports.add = function(request,response) {
     console.log(newEvent);
     
     data.events.push(newEvent);
-    response.render('addeventpage',data);    
+    response.render('eventlistpage',data);    
 }
