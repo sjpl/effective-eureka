@@ -7,6 +7,7 @@ var about = "";
 //console.log("hi");
 
 exports.view = function(req, res){
+//    data['showAlternate'] = false;
     var eventName = req.params.eventname;  
     
     for( var i = 0; i < data.events.length; i++){
@@ -18,16 +19,6 @@ exports.view = function(req, res){
             about = data.events[i].about;
         }
     }
-//    console.log("hi");
-//    img = "../public/" + img;    
-//    console.log(img);
-    
-    
-//    console.log('eventname: ' + eventName);
-//    console.log('location: ' + loc);
-//    console.log('img: ' + img);
-//    console.log('date: ' + date);
-//    console.log('time: ' + time);
     
     res.render('eventpage', {
         'eventname': eventName,
@@ -35,11 +26,13 @@ exports.view = function(req, res){
         'img': img,
         'date': date,
         'time': time,
-        'about': about
+        'about': about,
+        'showAlternate':false
     });
 }
 
 exports.view2 = function(req, res){
+    data['showAlternate'] = true;
     var eventName = req.params.eventname;  
     
     for( var i = 0; i < data.events.length; i++){
@@ -51,23 +44,14 @@ exports.view2 = function(req, res){
             about = data.events[i].about;
         }
     }
-//    console.log("hi");
-//    img = "../public/" + img;    
-//    console.log(img);
     
-    
-//    console.log('eventname: ' + eventName);
-//    console.log('location: ' + loc);
-//    console.log('img: ' + img);
-//    console.log('date: ' + date);
-//    console.log('time: ' + time);
-    
-    res.render('eventpage2', {
+    res.render('eventpage', {
         'eventname': eventName,
         'location': loc,
         'img': img,
         'date': date,
         'time': time,
-        'about': about
+        'about': about,
+        'showAlternate':true
     });
 }

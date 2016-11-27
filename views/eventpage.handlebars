@@ -102,18 +102,52 @@
                                     background: lightgreen;
                                 }
                             </style>
+
+                            <script>
+                                console.log({{showAlternate}});
+                            </script>
+                            {{#if showAlternate}}
                             <div class="dropdown">
                                 <script>
                                     function change() // no ';' here
                                     {
-                                        var elem = document.getElementById("myButton1");
+                                        var elem = document.getElementById("followButton");
                                         if (elem.value == "Not Following") elem.value = "Following";
                                         else elem.value = "Not Following";
+                                        
+                                        ga('send','event','followToggle','click');
                                     }
                                 </script>
-                                <input onclick="change()" type="button" value="Not Following" id="myButton1" style="width: 150px; padding: 5px">
+                                <input onclick="change()" type="button" value="Not Following" id="followButton" style="width: 150px; padding: 5px">
                             </div>
+
+                            {{else}}
+                            <div class="dropdown">
+                                <script>
+                                    function change() // no ';' here
+                                    {
+                                        var elem = document.getElementById("followButton");
+                                        if (elem.value == "Follow")
+                                            elem.value = "Following";
+                                        else elem.value = "Follow";
+                                    }
+
+                                    function colorchange(id) {
+                                        var el = document.getElementById(id);
+                                        var currentClass = el.getAttribute("class");
+                                        if (currentClass == 'classA') {
+                                            el.setAttribute("class", "classB");
+                                        } else {
+                                            el.setAttribute("class", "classA");
+                                        }
+
+                                    }
+                                </script>
+                                <input onclick="colorchange('followButton'), change()" class="classA" type="button" value="Follow" id="followButton" style="width: 150px; padding: 5px">
+                            </div>
+                            {{/if}}
                         </div>
+                        <!--^ Defines end of the well-->
                         <script>
                             $(function () {
                                 $("#details").click(function () {
@@ -135,10 +169,10 @@
                             });
                         </script>
                         <div class="flexbox flex-tabs">
-                            <a href="#">
+                            <a href="">
                                 <div class="active" id="details">Details</div>
                             </a>
-                            <a href="#">
+                            <a href="">
                                 <div id="discussion">Discussion</div>
                             </a>
                         </div>
