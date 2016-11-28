@@ -68,36 +68,32 @@
         </a>
     </div>
     
-    <div class="well well-sm" style="margin-bottom:0px;" role="gridcell">  <div style="display: inline-block;vertical-align:middle;">
     <div class="g-grid">
+        <section class="1-pad-bot-5 1-sm-pad-bot-3">
             <div class="js-popular-events">
                 <div class="js-events-list">
                     {{#each events}}
-                    
-    <a> <p></p></a>
-                            <div class="delete" ><p></p></div>
-                            
-                            <a href="/eventpage/{{eventname}}">
-                            <li>
-                            <div style="pointer-events: none; font-size: 6px; font-size: 14px;display: inline-block;vertical-align:middle;">
-                                <img style="height:90px;width:90px;display:table-cell; vertical-align:text-top;" src="{{img}}" alt="">
+                    <div class="g-cell g-cell--has-overflow g-cell-1-1 g-cell-md-1-2-g-cell-lg-1-3 1-pad-vert-3" role="row">
+                        <div class="well well-sm" style="margin-bottom:0px;" role="gridcell">
+                            <div style="display: inline-block;vertical-align:middle;">
+                                <img style="height:80px;width:80px;display:table-cell; vertical-align:text-top;" src="{{img}}" alt="">
                             </div>
-                            <div style="pointer-events: none; font-size: 6px; font-size: 14px; display: inline-block;vertical-align:middle;">
-                                
+                            <div style="display: inline-block;vertical-align:middle;">
+                                <a href="/eventpage/{{eventname}}">
                                     <p></p>
-                                    {{eventname}} <br />
-                                    {{date}} <br />
-                                    {{location}} <br />
-                                    <p style="display: inline-block">Category:</p>
-                                    {{categories}}
+                                    <div>{{eventname}}</div>
+                                    <div>{{date}}</div>
+                                    <div>{{location}}</div>
+                                </a>
+                                <p style="display: inline-block">Category:</p>
+                                <a class="event-category" style="display: inline-block" href="">{{categories}}</a>
                             </div>
-                            </li>
-                            </a>
-                        
-                        
+                        </div>
+                    </div>
                     {{/each}}
                 </div>
             </div>
+        </section>
     </div>
     </div></div>
     {{>googleAnalytics}}
