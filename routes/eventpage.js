@@ -7,7 +7,6 @@ var about = "";
 //console.log("hi");
 
 exports.view = function(req, res){
-//    data['showAlternate'] = false;
     var eventName = req.params.eventname;  
     
     for( var i = 0; i < data.events.length; i++){
@@ -26,13 +25,11 @@ exports.view = function(req, res){
         'img': img,
         'date': date,
         'time': time,
-        'about': about,
-        'showAlternate':false
+        'about': about
     });
 }
 
 exports.view2 = function(req, res){
-    data['showAlternate'] = true;
     var eventName = req.params.eventname;  
     
     for( var i = 0; i < data.events.length; i++){
@@ -45,13 +42,12 @@ exports.view2 = function(req, res){
         }
     }
     
-    res.render('eventpage', {
+    res.render('eventpage2', {
         'eventname': eventName,
         'location': loc,
         'img': img,
         'date': date,
         'time': time,
-        'about': about,
-        'showAlternate':true
+        'about': about
     });
 }
