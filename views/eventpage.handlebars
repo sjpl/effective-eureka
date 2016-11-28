@@ -140,32 +140,11 @@
                                 }
                             </style>
 
-                            <script>
-                                console.log({
-                                    {
-                                        showAlternate
-                                    }
-                                });
-                            </script>
-                            {{#if showAlternate}}
                             <div class="dropdown">
                                 <script>
                                     function change() // no ';' here
                                     {
-                                        var elem = document.getElementById("followButton");
-                                        if (elem.value == "Not Following") elem.value = "Following";
-                                        else elem.value = "Not Following";
-                                    }
-                                </script>
-                                <input onclick="change(), ga('send','event','followToggle','click')" type="button" value="Not Following" id="followButton" style="width: 150px; padding: 5px">
-                            </div>
-
-                            {{else}}
-                            <div class="dropdown">
-                                <script>
-                                    function change() // no ';' here
-                                    {
-                                        var elem = document.getElementById("followButton");
+                                        var elem = document.getElementById("select");
                                         if (elem.value == "Follow")
                                             elem.value = "Following";
                                         else elem.value = "Follow";
@@ -182,9 +161,9 @@
 
                                     }
                                 </script>
-                                <input onclick="colorchange('followButton'), change(), ga('send','event','followToggle','click')" class="classA" type="button" value="Follow" id="followButton" style="width: 150px; padding: 5px">
+                                <input onclick="colorchange('select'), change(), ga('send','event','followToggle','click')" class="classA" type="button" value="Follow" id="select" style="width: 150px; padding: 5px">
                             </div>
-                            {{/if}}
+
                         </div>
                         <!--^ Defines end of the well-->
                         <script>
