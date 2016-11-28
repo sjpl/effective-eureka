@@ -29,17 +29,28 @@
                     <div class="g-cell g-cell--has-overflow g-cell-1-1 g-cell-md-1-2-g-cell-lg-1-3 1-pad-vert-3" role="row">
                         <div class="well well-sm" style="margin-bottom:0px;" role="gridcell">
                             <div class="poster-card__header" style="display: inline-block">
-                                <div class="poster-card__image">
-                                    <img class="img-responsive" style="height:80px;width:80px;display:table-cell; vertical-align:text-top;" src="{{img}}" alt="">
-                                </div>
+                                <table>
+                                    <tr>
+                                        <style type="text/css">
+                                            td
+                                            {
+                                                padding:0 10px 0 10px;
+                                            }
+                                        </style>
+                                        <td>
+                                            <img style="height:80px;width:80px;display:table-cell; vertical-align:text-top;" src="{{img}}" alt="">
+                                        </td>
+                                        <td>
+                                            <a href="/hostpage/{{eventname}}" >
+                                                <div class="poster-card__body">
+                                                    <div class="poster-card__title">{{eventname}}</div>
+                                                    <div class="poster-card__venue"> {{notification-detail}}</div>
+                                                </div>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                  </table> 
                             </div>
-                            <a href="/eventpage/{{eventname}}" style="display: inline-block">
-                                <div class="poster-card__body">
-                                    <div class="poster-card__title">{{eventname}}
-                                    </div>
-                                    <div class="poster-card__venue"> {{notification-detail}}</div>
-                                </div>
-                            </a>
                         </div>
                     </div>
                     {{/each}}
